@@ -1,94 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPHA MAYFAIR</title>
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        /* Logo */
-        .logo-container {
-            margin-top: 40px;
-        }
-
-        .logo-container img {
-            width: 60%;
-            max-width: 300px;
-        }
-
-        /* Menu options */
-        .menu-section {
-            margin-top: 80px;
-            font-size: 24px;
-            line-height: 60px;
-        }
-
-        .menu-section a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer icons */
-        .footer-icons {
-            position: fixed;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            font-size: 30px;
-        }
-
-        /* WhatsApp floating button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 32px;
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ALPHA MAYFAIR</title>
+<style>
+  :root{
+    --gold:#d4af37;
+    --bg:#000;
+    --muted:#bfbfbf;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#fff;
+    font-family:Inter, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    text-align:center;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px}
+  /* header / logo */
+  .logo-wrap{padding-top:36px}
+  .logo-wrap img{width:320px;max-width:70%;height:auto;display:block;margin:0 auto}
+  /* nav menu */
+  .menu{margin-top:64px}
+  .menu a{
+    display:block;
+    margin:22px 0;
+    font-size:22px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:700;
+    letter-spacing:1px;
+  }
+  .menu a::before,.menu a::after{content:"•";margin:0 10px;color:var(--gold)}
+  /* bottom icons */
+  .bottom-bar{
+    position:fixed;left:0;right:0;bottom:18px;
+    display:flex;justify-content:center;gap:48px;align-items:center;
+    pointer-events:none;
+  }
+  .icon-btn{
+    pointer-events:auto;
+    background:transparent;border:0;color:#fff;text-decoration:none;
+    font-size:22px;padding:10px 12px;border-radius:8px;
+    display:inline-flex;align-items:center;gap:10px;opacity:0.95;
+  }
+  .icon-btn .label{display:none}
+  /* whatsapp floating */
+  .whatsapp{
+    position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;
+    background:var(--gold);display:flex;align-items:center;justify-content:center;
+    color:#000;font-weight:800;font-size:26px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.6);
+  }
+  /* small screens: show labels under icons */
+  @media(min-width:720px){
+    .icon-btn .label{display:inline-block;color:var(--muted);font-size:14px}
+  }
+  /* footer tiny */
+  .credits{position:fixed;left:14px;bottom:8px;color:rgba(255,255,255,0.08);font-size:12px}
+  .brand{color:var(--gold);font-weight:700}
+</style>
 </head>
 <body>
+  <div class="wrap">
+    <header class="logo-wrap">
+      <img src="logo.png" alt="Alpha Mayfair logo">
+    </header>
 
-    <!-- LOGO -->
-    <div class="logo-container">
-        <img src="logo.png" alt="Alpha Mayfair Logo">
-    </div>
+    <nav class="menu" aria-label="Main menu">
+      <a href="book.html">Book a Table</a>
+      <a href="guestlist.html">Join Guestlist</a>
+      <a href="clubs.html">Explore Nightclubs</a>
+    </nav>
+  </div>
 
-    <!-- MENU -->
-    <div class="menu-section">
-        <p><a href="#">• Book a Table •</a></p>
-        <p><a href="#">• Join Guestlist •</a></p>
-        <p><a href="#">• Explore Nightclubs •</a></p>
-    </div>
+  <div class="bottom-bar" role="navigation" aria-label="Contact">
+    <a class="icon-btn" href="https://www.instagram.com/alpha_mayfair" target="_blank" rel="noopener">
+      📸 <span class="label">Instagram</span>
+    </a>
 
-    <!-- FOOTER ICONS -->
-    <div class="footer-icons">
-        <a href="https://www.instagram.com/alpha_mayfair" style="color:white;">📸</a>
-        <a href="tel:+447787672749" style="color:white;">📞</a>
-    </div>
+    <a class="icon-btn" href="tel:+447787672749">
+      📞 <span class="label">Call</span>
+    </a>
+  </div>
 
-    <!-- WHATSAPP BUTTON -->
-    <a class="whatsapp-btn" href="https://wa.me/447787672749">💬</a>
+  <a class="whatsapp" href="https://wa.me/447787672749" title="WhatsApp Alpha Mayfair">💬</a>
 
+  <div class="credits">ALPHA MAYFAIR — <span class="brand">VIP HOST / PROMOTER</span></div>
 </body>
 </html>
