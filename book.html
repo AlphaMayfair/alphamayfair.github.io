@@ -1,59 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Book a Table — Alpha Mayfair</title>
-<style>
-  :root{--gold:#d4af37;--bg:#000;--muted:#bfbfbf}
-  body{margin:0;background:var(--bg);color:#fff;font-family:Inter,Arial;min-height:100vh}
-  .wrap{max-width:980px;margin:0 auto;padding:28px 20px;text-align:center}
-  header{padding-top:20px}
-  header img{width:220px;max-width:60%}
-  h1{color:var(--gold);letter-spacing:2px;margin:30px 0 12px}
-  p.lead{color:var(--muted);margin-bottom:22px}
-  .card{background:rgba(255,255,255,0.02);border:1px solid rgba(212,175,55,0.08);padding:22px;border-radius:10px;max-width:760px;margin:18px auto}
-  .club-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
-  .club{
-    border:1px solid rgba(212,175,55,0.08);
-    padding:14px;border-radius:8px;background:rgba(0,0,0,0.12)
-  }
-  .club h3{margin:0 0 8px;color:#fff;font-size:18px}
-  .club p{margin:0 0 10px;color:var(--muted);font-size:14px}
-  .btn{
-    display:inline-block;background:var(--gold);color:#000;padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:700
-  }
-  .nav-link{color:var(--muted);display:inline-block;margin-top:20px;text-decoration:none}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alpha Mayfair — Book a Table</title>
+  <style>
+    :root {
+      --gold: #d4af37;
+      --bg: #000;
+      --muted: #ccc;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header img {
+      width: 200px;
+      max-width: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+    h1 {
+      color: var(--gold);
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #fff;
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+    .info-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,175,55,0.2);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+    }
+    .info-box h2 {
+      color: var(--gold);
+      margin-top: 0;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #000;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 10px 0;
+    }
+    .nav {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header><img src="logo.png" alt="Alpha Mayfair"></header>
+  <div class="container">
+    <header>
+      <img src="logo.png" alt="Alpha Mayfair Logo">
+    </header>
+
     <h1>BOOK A TABLE</h1>
-    <p class="lead">Reserve a table or enquire about VIP packages. Message us on WhatsApp for fastest response.</p>
+    <p class="lead">Secure a VIP table or bottle-service booking at London’s top Mayfair nightclubs. Tell us your date, group size & preferences — we handle the rest.</p>
 
-    <div class="card">
-      <strong>Quick book via WhatsApp</strong>
-      <p style="color:var(--muted);margin-top:8px">Click the button and fill: date, time, guests, any special requests.</p>
-      <!-- prefilled message -->
-      <p style="margin-top:16px">
-        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I%20want%20to%20book%20a%20table%20on%20%5Bdate%5D%20for%20%5Bnumber%20of%20guests%5D.%20Please%20send%20me%20prices%20and%20availability." target="_blank">Message to Book</a>
-      </p>
-    </div>
-
-    <h2 style="color:var(--gold);margin-top:26px">Recommended Packages (guide)</h2>
-    <div class="card" style="text-align:left">
-      <p style="color:var(--muted);margin:0 0 12px">These are indicative — final pricing depends on night & event.</p>
-      <ul style="color:var(--muted);line-height:1.8">
-        <li><strong>Regular table:</strong> from £1,500 minimum spend (up to 8 guests).</li>
-        <li><strong>VIP table:</strong> from £2,500+ (up to 10 guests).</li>
-        <li><strong>NYE & Special events:</strong> numbered tickets + table deposit required.</li>
+    <div class="info-box">
+      <h2>What you get with a table booking</h2>
+      <ul style="text-align:left; color:#ddd;">
+        <li>Your private table or VIP section in the club</li>
+        <li>Personalised service, VIP entry & smooth access</li>
+        <li>Bottle service — pay as you order until you reach the minimum spend</li>
+        <li>Clear minimum spend details provided before booking</li>
       </ul>
     </div>
 
-    <p style="margin-top:20px;color:var(--muted)">Prefer a specific club? Choose on the Explore page or tell us in your message.</p>
+    <div class="info-box">
+      <h2>Typical Minimum Spend</h2>
+      <p style="color:#ddd;">
+        Standard tables usually start around <strong>£1,000</strong>.  
+        VIP or larger-group tables typically begin at <strong>£2,000+</strong>.  
+        Final price depends on club, date, group size, and table location.
+      </p>
+    </div>
 
-    <a class="nav-link" href="index.html">← Back to Home</a>
+    <div class="info-box">
+      <h2>How to Book</h2>
+      <p style="color:#ddd; margin-bottom:14px;">
+        Hit the button below to message us on WhatsApp.  
+        Include: date • number of guests • preferred club (optional) • any special requests (budget, seating, bottle-service, etc.).
+      </p>
+      <p>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I%20would%20like%20to%20book%20a%20table.%20Date%3A%20%5Byour%20date%5D%20%7C%20Guests%3A%20%5Bnumber%5D%20%7C%20Any%20preferences%3A%20%5Byour%20preferences%5D" target="_blank">Send Booking Request</a>
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h2>Important Notes</h2>
+      <ul style="text-align:left; color:#ddd;">
+        <li>A valid ID required on entry (18+).</li>
+        <li>Dress code: smart & elegant. No sportswear or casual trainers.</li>
+        <li>Minimum spend covers bottles & drinks only — entry is included.</li>
+        <li>On busy nights or VIP tables a deposit may be requested.</li>
+      </ul>
+    </div>
+
+    <div class="nav">
+      <a href="index.html">← Back to Home</a>
+    </div>
   </div>
 </body>
 </html>
