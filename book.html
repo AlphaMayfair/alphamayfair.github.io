@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a Table – Alpha Mayfair</title>
+<style>
+  :root { --gold: #d4af37; --bg: #000; --muted: #cfcfcf; --card-bg: #111; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: #fff; font-family: Arial, sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
+  header { text-align: center; margin-bottom: 30px; }
+  header img { width: 220px; max-width: 60%; }
+  h1 { text-align: center; color: var(--gold); letter-spacing: 2px; margin-bottom: 10px; }
+  .intro { text-align: center; color: var(--muted); margin-bottom: 22px; font-size: 18px; }
+  
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 24px; }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid rgba(212,175,55,0.08);
+    border-radius: 12px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card h3 { margin: 8px 0 6px; color: var(--gold); font-size: 20px; }
+  .addr { font-size: 13px; color: #bfbfbf; margin-bottom: 6px; }
+  .times, .meta { font-size: 14px; color: #ddd; margin-bottom: 8px; }
+  .badge {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: var(--gold);
+    color: #000;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background: var(--gold);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+  }
+
+  .form { margin-top: 40px; background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.06); padding: 22px; border-radius: 10px; }
+  .form h2 { color: var(--gold); text-align: center; margin-top: 0; margin-bottom: 20px; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; color: var(--gold); margin-bottom: 6px; font-weight: bold; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #333; background: #0b0b0b; color: #fff;
+  }
+  .form-group textarea { resize: vertical; }
+  button.submit {
+    width: 100%; padding: 14px; background: var(--gold); color: #000; border: none; border-radius: 8px;
+    font-size: 16px; font-weight: 800; cursor: pointer; margin-top: 10px;
+  }
+
+  footer { margin-top: 48px; padding: 20px; text-align: center; color: #777; border-top: 1px solid #111; }
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <img src="logo.png" alt="Alpha Mayfair Logo">
+    </header>
+
+    <h1>BOOK A TABLE — MAYFAIR NIGHTCLUBS</h1>
+    <p class="intro">
+      Choose your club, check typical opening days, and book directly via WhatsApp or our booking form below.
+    </p>
+
+    <div class="grid">
+      <!-- Cirque Le Soir -->
+      <div class="card">
+        <div class="badge">Mon · Wed · Fri · Sat</div>
+        <h3>Cirque Le Soir</h3>
+        <div class="addr">15–21 Ganton Street, London W1F 9BN</div>
+        <div class="times"><strong>Typical hours:</strong> Doors ~ 22:30–03:30 (varies by show)</div>
+        <div class="meta">Circus-themed nightclub famous for unique performances & bottle service.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Cirque%20Le%20Soir.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Reign Showclub -->
+      <div class="card">
+        <div class="badge">Tue · Thu · Fri · Sat</div>
+        <h3>Reign Showclub</h3>
+        <div class="addr">215–217 Piccadilly, St. James’s, London W1J 9HN</div>
+        <div class="times"><strong>Typical hours:</strong> Doors ~ 22:30–03:30 (show nights)</div>
+        <div class="meta">Showclub with performances, VIP tables & late-night parties.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Reign.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Tape London -->
+      <div class="card">
+        <div class="badge">Tue · Fri · Sat · Sun</div>
+        <h3>Tape London</h3>
+        <div class="addr">17 Hanover Square, Mayfair, London W1S 1HU</div>
+        <div class="times"><strong>Typical hours:</strong> 23:00–03:30 (after-parties may vary)</div>
+        <div class="meta">Music-led VIP club with celebrity DJs & late-night atmosphere.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Tape.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- TABŪ London -->
+      <div class="card">
+        <div class="badge">Wed · Thu · Fri · Sat</div>
+        <h3>TABŪ London</h3>
+        <div class="addr">1 Dover Street, London W1S 4LD</div>
+        <div class="times"><strong>Typical hours:</strong> 23:00–03:30 (varies by event)</div>
+        <div class="meta">Top-tier Mayfair club — bottle service, VIP tables & premium nights.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Tabu.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Cuckoo Club -->
+      <div class="card">
+        <div class="badge">Wed · Fri · Sat</div>
+        <h3>The Cuckoo Club</h3>
+        <div class="addr">Swallow Street, Mayfair, London W1B</div>
+        <div class="times"><strong>Typical hours:</strong> 23:00–03:30</div>
+        <div class="meta">Luxurious late-night club in central Mayfair.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Cuckoo%20Club.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Dear Darling -->
+      <div class="card">
+        <div class="badge">Thu · Fri · Sat · Sun</div>
+        <h3>Dear Darling</h3>
+        <div class="addr">91 Jermyn Street, St. James’s, London SW1Y 6JB</div>
+        <div class="times"><strong>Typical hours:</strong> 22:00–03:00 (dinner + late-night service)</div>
+        <div class="meta">Elegant lounge & bar, great for pre-drinks + VIP bookings.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Dear%20Darling.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- INCA (Luna / INCA London) -->
+      <div class="card">
+        <div class="badge">Fri · Sat · Sun</div>
+        <h3>INCA (Luna / INCA London)</h3>
+        <div class="addr">8–9 Argyll Street, London W1F 7TF</div>
+        <div class="times"><strong>Typical hours:</strong> Restaurant & late-night bar (Evenings → Late)</div>
+        <div class="meta">Restaurant & bar venue with late-night service — perfect for relaxed starts or late finishes.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20INCA.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Selene Club -->
+      <div class="card">
+        <div class="badge">Fri · Sat · Sun</div>
+        <h3>Selene Club</h3>
+        <div class="addr">4 Winsley Street, London W1W 8HF</div>
+        <div class="times"><strong>Typical hours:</strong> Late-night events; times vary by event — usually 23:00 – 04:00</div>
+        <div class="meta">Members & VIP nights with special events — check guestlist for official events.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Selene.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+      <!-- Luxx Club -->
+      <div class="card">
+        <div class="badge">Fri · Sat</div>
+        <h3>Luxx Club London</h3>
+        <div class="addr">15 Berkeley Street, London W1J 8DY</div>
+        <div class="times"><strong>Typical hours:</strong> 22:30/23:00 – 03:30/04:00 (varies by night)</div>
+        <div class="meta">Upscale late-night lounge with VIP service & cocktails.</div>
+        <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair%2C%20I’d%20like%20to%20book%20a%20table%20at%20Luxx.%20Date:%20%5Byour%20date%5D%20Guests:%20%5Bnumber%5D" target="_blank">Book via WhatsApp</a>
+      </div>
+
+    </div> <!-- grid -->
+
+    <div class="form">
+      <h2>Or Send Booking Request</h2>
+      <form onsubmit="return sendWhatsAppForm(event)">
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name">
+        </div>
+
+        <div class="form-group">
+          <label for="club">Club</label>
+          <select id="club" name="club" required>
+            <option value="">Choose a club …</option>
+            <option>Tabu</option><option>Reign</option><option>Cirque Le Soir</option>
+            <option>Tape</option><option>Luxx</option><option>Cuckoo Club</option>
+            <option>Dear Darling</option><option>INCA</option><option>Selene</option><option>Maddox</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input id="guests" name="guests" type="number" min="2" value="4" required>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Notes / Budget / Requests</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="e.g. bottle service, VIP table, birthday ..."></textarea>
+        </div>
+
+        <button class="submit" type="submit">Send via WhatsApp</button>
+      </form>
+    </div>
+
+    <p style="color:var(--muted);text-align:center;font-size:13px;margin-top:20px">
+      ⚠️ Opening times are typical examples. Always confirm final availability for your chosen date.
+    </p>
+
+  </div> <!-- wrap -->
+
+  <footer>© 2025 ALPHA MAYFAIR — VIP Nightlife</footer>
+
+<script>
+  (function(){
+    const d = new Date();
+    const m = ("0"+(d.getMonth()+1)).slice(-2);
+    const day = ("0"+d.getDate()).slice(-2);
+    const min = d.getFullYear()+"-"+m+"-"+day;
+    document.getElementById('date').min = min;
+  })();
+
+  function sendWhatsAppForm(e){
+    e.preventDefault();
+    const name = encodeURIComponent(document.getElementById('name').value);
+    const club = encodeURIComponent(document.getElementById('club').value);
+    const date = encodeURIComponent(document.getElementById('date').value);
+    const guests = encodeURIComponent(document.getElementById('guests').value);
+    const notes = encodeURIComponent(document.getElementById('notes').value);
+    const msg = `Hi Alpha Mayfair, I’d like to book a table.%0AName: ${name}%0AClub: ${club}%0ADate: ${date}%0AGuests: ${guests}%0ANotes: ${notes}`;
+    const wa = `https://wa.me/447787672749?text=${msg}`;
+    window.open(wa, '_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
