@@ -1,93 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ALPHA MAYFAIR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha Mayfair – London VIP Nightlife</title>
+
 <style>
-  :root{
-    --gold:#d4af37;
-    --bg:#000;
-    --muted:#bfbfbf;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    background:var(--bg);
-    color:#fff;
-    font-family:Inter, "Helvetica Neue", Arial, sans-serif;
-    -webkit-font-smoothing:antialiased;
-    text-align:center;
-  }
-  .wrap{max-width:980px;margin:0 auto;padding:28px 20px}
-  /* header / logo */
-  .logo-wrap{padding-top:36px}
-  .logo-wrap img{width:320px;max-width:70%;height:auto;display:block;margin:0 auto}
-  /* nav menu */
-  .menu{margin-top:64px}
-  .menu a{
-    display:block;
-    margin:22px 0;
-    font-size:22px;
-    text-decoration:none;
-    color:#fff;
-    font-weight:700;
-    letter-spacing:1px;
-  }
-  .menu a::before,.menu a::after{content:"•";margin:0 10px;color:var(--gold)}
-  /* bottom icons */
-  .bottom-bar{
-    position:fixed;left:0;right:0;bottom:18px;
-    display:flex;justify-content:center;gap:48px;align-items:center;
-    pointer-events:none;
-  }
-  .icon-btn{
-    pointer-events:auto;
-    background:transparent;border:0;color:#fff;text-decoration:none;
-    font-size:22px;padding:10px 12px;border-radius:8px;
-    display:inline-flex;align-items:center;gap:10px;opacity:0.95;
-  }
-  .icon-btn .label{display:none}
-  /* whatsapp floating */
-  .whatsapp{
-    position:fixed;right:20px;bottom:20px;width:64px;height:64px;border-radius:50%;
-    background:var(--gold);display:flex;align-items:center;justify-content:center;
-    color:#000;font-weight:800;font-size:26px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.6);
-  }
-  /* small screens: show labels under icons */
-  @media(min-width:720px){
-    .icon-btn .label{display:inline-block;color:var(--muted);font-size:14px}
-  }
-  /* footer tiny */
-  .credits{position:fixed;left:14px;bottom:8px;color:rgba(255,255,255,0.08);font-size:12px}
-  .brand{color:var(--gold);font-weight:700}
+    :root {
+        --gold: #d4af37;
+        --bg: #000;
+        --muted: #bfbfbf;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        background: var(--bg);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAVIGATION */
+    .navbar {
+        width: 100%;
+        background: #000;
+        border-bottom: 1px solid rgba(212,175,55,0.3);
+        padding: 14px 0;
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+    .nav-container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-logo {
+        color: var(--gold);
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 22px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0.85;
+    }
+    .nav-links a:hover { color: var(--gold); opacity: 1; }
+
+    /* MOBILE MENU */
+    .hamburger {
+        width: 30px;
+        height: 22px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .hamburger span {
+        height: 3px;
+        background: var(--gold);
+        border-radius: 3px;
+    }
+    @media(max-width: 760px) {
+        .hamburger { display: flex; }
+        .nav-links {
+            position: absolute;
+            top: 100%; right: 0; width: 100%;
+            background: #000;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(212,175,55,0.25);
+        }
+        .nav-links.open { display: flex; }
+        .nav-links a { margin: 12px 0; font-size: 16px; }
+    }
+
+    /* HERO SECTION */
+    .hero {
+        text-align: center;
+        padding: 80px 20px 60px;
+    }
+    .hero img {
+        width: 260px;
+        max-width: 80%;
+        margin-bottom: 30px;
+    }
+    .hero h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 26px;
+        color: white;
+    }
+    .divider {
+        width: 80px;
+        height: 2px;
+        background: var(--gold);
+        margin: 20px auto;
+    }
+    .hero-sub {
+        max-width: 700px;
+        margin: 20px auto 40px;
+        font-size: 17px;
+        line-height: 1.6;
+        color: var(--muted);
+    }
+
+    /* CTA BUTTONS */
+    .cta-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 40px auto;
+        max-width: 420px;
+    }
+    .cta-btn {
+        text-decoration: none;
+        text-align: center;
+        padding: 14px;
+        background: var(--gold);
+        color: black;
+        font-weight: 800;
+        font-size: 15px;
+        border-radius: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .cta-btn:hover { opacity: 0.85; }
+
+    footer {
+        margin-top: 50px;
+        padding: 30px;
+        text-align: center;
+        color: #777;
+        font-size: 13px;
+    }
 </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <header class="logo-wrap">
-      <img src="logo.jpg" alt="Alpha Mayfair logo">
-    </header>
 
-    <nav class="menu" aria-label="Main menu">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
-      <a href="guestlist.html">Join Guestlist</a>
-      <a href="clubs.html">Explore Nightclubs</a>
-    </nav>
+      <a href="guestlist.html">Guestlist</a>
+      <a href="clubs.html">Nightclubs</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
+</nav>
 
-  <div class="bottom-bar" role="navigation" aria-label="Contact">
-    <a class="icon-btn" href="https://www.instagram.com/alpha_mayfair" target="_blank" rel="noopener">
-      📸 <span class="label">Instagram</span>
-    </a>
+<!-- HERO -->
+<section class="hero">
+    <img src="logo.jpg" alt="Alpha Mayfair Logo">
 
-    <a class="icon-btn" href="tel:+447787672749">
-      📞 <span class="label">Call</span>
-    </a>
-  </div>
+    <h1>London’s Most Exclusive Nightlife Experience</h1>
 
-  <a class="whatsapp" href="https://wa.me/447787672749" title="WhatsApp Alpha Mayfair">💬</a>
+    <div class="divider"></div>
 
-  <div class="credits">ALPHA MAYFAIR — <span class="brand">VIP HOST / PROMOTER</span></div>
+    <p class="hero-sub">
+        VIP Tables, Guestlists, Luxury Events & Exclusive Mayfair Nightclubs.
+        Alpha Mayfair connects you with London’s top venues: Cirque, Tape, Reign, Tabu,
+        Cuckoo, Dear Darling, INCA, Selene & more.
+    </p>
+
+    <div class="cta-wrap">
+        <a href="book.html" class="cta-btn">Book a Table</a>
+        <a href="guestlist.html" class="cta-btn">Join Guestlist</a>
+        <a href="clubs.html" class="cta-btn">Explore Nightclubs</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 Alpha Mayfair — VIP Host & Luxury Nightlife
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("open");
+}
+</script>
+
 </body>
 </html>
