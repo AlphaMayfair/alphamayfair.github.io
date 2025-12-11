@@ -3,102 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Explore Nightclubs – Alpha Mayfair</title>
+<title>Explore Mayfair Nightclubs – Alpha Mayfair</title>
 
-<!-- NAV BAR STYLES -->
-<style>
-  :root { --gold:#d4af37; }
-  * { margin:0; padding:0; box-sizing:border-box; }
+<!-- SEO -->
+<meta name="description" content="Explore the best Mayfair nightclubs with Alpha Mayfair – Cirque Le Soir, Reign, Tape, Tabu, Cuckoo, Dear Darling, INCA, Selene and Luxx. VIP tables and guestlists available.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Explore Mayfair Nightclubs – Alpha Mayfair">
+<meta property="og:description" content="Discover London’s most exclusive Mayfair nightclubs and enquire via WhatsApp for tables and guestlists.">
+<meta property="og:image" content="logo.png">
 
-  .navbar {
-    width:100%;
-    background:#000;
-    border-bottom:1px solid rgba(212,175,55,0.3);
-    padding:14px 0;
-    position:sticky;
-    top:0;
-    z-index:9999;
-  }
-  .nav-container {
-    max-width:1200px;
-    margin:auto;
-    padding:0 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .nav-logo {
-    color:var(--gold);
-    text-decoration:none;
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:1px;
-  }
-  .nav-links a {
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    text-transform:uppercase;
-    font-size:14px;
-    font-weight:600;
-    opacity:.85;
-  }
-  .nav-links a:hover {
-    color:var(--gold);
-    opacity:1;
-  }
-
-  .hamburger {
-    width:30px;
-    height:22px;
-    display:none;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-  }
-  .hamburger span {
-    height:3px;
-    background:var(--gold);
-    border-radius:3px;
-  }
-
-  @media(max-width:760px){
-    .hamburger { display:flex; }
-    .nav-links {
-      position:absolute;
-      top:100%; left:0; right:0;
-      background:#000;
-      padding:20px 0;
-      flex-direction:column;
-      align-items:center;
-      border-bottom:1px solid rgba(212,175,55,0.25);
-      display:none;
-    }
-    .nav-links.open { display:flex; }
-    .nav-links a { margin:12px 0; font-size:16px; }
-  }
-</style>
-
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
-}
-</script>
-
-<!-- YOUR ORIGINAL PAGE STYLES BELOW (UNCHANGED) -->
 <style>
   :root {
     --gold:#d4af37;
     --bg:#000;
     --muted:#d0d0d0;
   }
-  *{box-sizing:border-box;}
+  *{box-sizing:border-box; margin:0; padding:0;}
   body{
     margin:0;
     background:var(--bg);
     color:#fff;
     font-family:Arial,Helvetica,sans-serif;
   }
+
+  /* NAVBAR */
+  .navbar{
+    width:100%; background:#000;
+    border-bottom:1px solid rgba(212,175,55,0.3);
+    padding:14px 0;
+    position:sticky; top:0; z-index:9999;
+  }
+  .nav-container{
+    max-width:1200px; margin:auto; padding:0 22px;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .nav-logo{
+    color:var(--gold); text-decoration:none;
+    font-size:22px; font-weight:900; letter-spacing:1px;
+  }
+  .nav-links a{
+    color:white; text-decoration:none;
+    margin-left:22px; text-transform:uppercase;
+    font-size:14px; font-weight:600; opacity:.85;
+  }
+  .nav-links a:hover{color:var(--gold); opacity:1;}
+  .hamburger{
+    width:30px; height:22px; display:none;
+    flex-direction:column; justify-content:space-between;
+    cursor:pointer;
+  }
+  .hamburger span{
+    height:3px; background:var(--gold); border-radius:3px;
+  }
+  @media(max-width:760px){
+    .hamburger{display:flex;}
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0;
+      background:#000; padding:20px 0;
+      display:none; flex-direction:column; align-items:center;
+      border-bottom:1px solid rgba(212,175,55,0.25);
+    }
+    .nav-links.open{display:flex;}
+    .nav-links a{margin:12px 0;font-size:16px;}
+  }
+
   header{
     text-align:center;
     padding:20px 16px 10px;
@@ -126,6 +95,13 @@ function toggleMenu(){
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity 0.9s ease, transform 0.9s ease;
+  }
+  .club-block.visible{
+    opacity:1;
+    transform:translateY(0);
   }
   .club-block::before{
     content:"";
@@ -144,6 +120,11 @@ function toggleMenu(){
     text-transform:uppercase;
     font-weight:800;
     letter-spacing:1px;
+    transition:color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .club-block:hover .club-title{
+    color:var(--gold);
+    text-shadow:0 0 16px rgba(212,175,55,0.9);
   }
   .club-addr{
     font-size:13px;
@@ -169,12 +150,39 @@ function toggleMenu(){
     font-size:13px;
     text-transform:uppercase;
   }
+  .btn:hover{
+    box-shadow:0 0 12px rgba(212,175,55,0.8);
+  }
 
   footer{
     text-align:center;
-    padding:24px 16px 30px;
+    padding:24px 16px 50px;
     color:#777;
     font-size:12px;
+    border-top:1px solid #111;
+  }
+  .footer-icons a img{
+    width:26px; margin:0 8px; vertical-align:middle;
+  }
+
+  .wa-bubble{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.7);
+    z-index:10000;
+    text-decoration:none;
+  }
+  .wa-bubble img{
+    width:30px;
+    height:30px;
   }
 
   @media(min-width:768px){
@@ -190,89 +198,79 @@ function toggleMenu(){
 
 <body>
 
-<!-- NAV BAR -->
 <nav class="navbar">
   <div class="nav-container">
-
     <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
       <a href="guestlist.html">Guestlist</a>
       <a href="clubs.html">Nightclubs</a>
+      <a href="about.html">About</a>
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
-
   </div>
 </nav>
 
-
-<!-- YOUR FULL PAGE CONTENT (UNCHANGED) -->
-
 <header>
-  <img src="logo.jpg" alt="Alpha Mayfair logo">
+  <img src="logo.png" alt="Alpha Mayfair logo">
 </header>
 
 <h1>Explore Mayfair Nightclubs</h1>
 
+<!-- NOTE: Using local images from repository root:
+     cirque.JPG, reign.JPG, tape.JPG, tabu.JPG, cuckoo.JPG, dear-darling.JPG, inca.jpg, selene.JPG, luxx.JPG.
+     For CDN hosting, upload them and replace filenames with CDN URLs. -->
+
 <!-- CIRQUE -->
-<section class="club-block"
-  style="background-image:url('cirque.JPG');">
+<section class="club-block" style="background-image:url('cirque.JPG');">
   <div class="club-content">
     <h2 class="club-title">Cirque Le Soir</h2>
     <div class="club-addr">15–21 Ganton Street, Soho, London W1F 9BN</div>
     <div class="club-days"><strong>Open:</strong> Monday · Wednesday · Friday · Saturday</div>
     <p class="club-desc">
-      World-famous circus-themed nightclub with outrageous performances, bottle service and
-      a late-night crowd.
+      World-famous circus-themed nightclub with outrageous performances, bottle service and a late-night crowd.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cirque%20Le%20Soir."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cirque%20Le%20Soir." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- REIGN -->
-<section class="club-block"
-  style="background-image:url('reign.JPG');">
+<section class="club-block" style="background-image:url('reign.JPG');">
   <div class="club-content">
     <h2 class="club-title">Reign Showclub</h2>
     <div class="club-addr">215–217 Piccadilly, St. James’s, London W1J 9HN</div>
     <div class="club-days"><strong>Open:</strong> Tuesday · Thursday · Friday · Saturday</div>
     <p class="club-desc">
-      High-energy showclub with acrobats, dancers and full production. Perfect for big
-      celebrations and VIP tables.
+      High-energy showclub with acrobats, dancers and full production. Perfect for big celebrations and VIP tables.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Reign%20Showclub."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Reign%20Showclub." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- TAPE -->
-<section class="club-block"
-  style="background-image:url('tape.JPG');">
+<section class="club-block" style="background-image:url('tape.JPG');">
   <div class="club-content">
     <h2 class="club-title">Tape London</h2>
     <div class="club-addr">17 Hanover Square, Mayfair, London W1S 1HU</div>
     <div class="club-days"><strong>Open:</strong> Tuesday · Friday · Saturday · Sunday</div>
     <p class="club-desc">
-      Iconic music-led nightclub with celebrity DJs and late-night afterparties.
-      Think hip-hop, R&B and Afrobeats.
+      Iconic music-led nightclub with celebrity DJs and late-night afterparties. Hip-hop, R&B and Afrobeats.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tape%20London."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tape%20London." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- TABU -->
-<section class="club-block"
-  style="background-image:url('tabu.JPG');">
+<section class="club-block" style="background-image:url('tabu.JPG');">
   <div class="club-content">
     <h2 class="club-title">TABŪ London</h2>
     <div class="club-addr">1 Dover Street, Mayfair, London W1S 4LD</div>
@@ -280,15 +278,14 @@ function toggleMenu(){
     <p class="club-desc">
       Stylish Mayfair hotspot with bold shows, strong music and a luxury bottle-service crowd.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tabu."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tabu." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- CUCKOO -->
-<section class="club-block"
-  style="background-image:url('cuckoo.JPG');">
+<section class="club-block" style="background-image:url('cuckoo.JPG');">
   <div class="club-content">
     <h2 class="club-title">The Cuckoo Club</h2>
     <div class="club-addr">Swallow Street, Mayfair, London W1B</div>
@@ -296,15 +293,14 @@ function toggleMenu(){
     <p class="club-desc">
       Intimate, glamorous Mayfair venue with deep-house, R&B and a stylish members-style crowd.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cuckoo%20Club."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cuckoo%20Club." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- DEAR DARLING -->
-<section class="club-block"
-  style="background-image:url('dear-darling.JPG');">
+<section class="club-block" style="background-image:url('dear-darling.JPG');">
   <div class="club-content">
     <h2 class="club-title">Dear Darling</h2>
     <div class="club-addr">91 Jermyn Street, St. James’s, London SW1Y 6JB</div>
@@ -312,15 +308,14 @@ function toggleMenu(){
     <p class="club-desc">
       Elegant bar & lounge – ideal for pre-drinks, birthdays and relaxed Mayfair nights before or after the club.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20guestlist/table%20for%20Dear%20Darling."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20guestlist/table%20for%20Dear%20Darling." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- INCA / LUNA -->
-<section class="club-block"
-  style="background-image:url('inca.jpg');">
+<section class="club-block" style="background-image:url('inca.jpg');">
   <div class="club-content">
     <h2 class="club-title">INCA / Luna</h2>
     <div class="club-addr">8–9 Argyll Street, London W1F 7TF</div>
@@ -328,15 +323,14 @@ function toggleMenu(){
     <p class="club-desc">
       Latin-inspired restaurant and late-night venue by the Palladium – perfect for dinner + party combos.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20INCA%20or%20Luna."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20INCA%20or%20Luna." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- SELENE -->
-<section class="club-block"
-  style="background-image:url('selene.JPG');">
+<section class="club-block" style="background-image:url('selene.JPG');">
   <div class="club-content">
     <h2 class="club-title">Selene London</h2>
     <div class="club-addr">4 Winsley Street, London W1W 8HF</div>
@@ -344,15 +338,14 @@ function toggleMenu(){
     <p class="club-desc">
       Boutique club and event space with curated music nights & themed parties.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Selene."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Selene." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <!-- LUXX -->
-<section class="club-block"
-  style="background-image:url('luxx.JPG');">
+<section class="club-block" style="background-image:url('luxx.JPG');">
   <div class="club-content">
     <h2 class="club-title">Luxx Club</h2>
     <div class="club-addr">15 Berkeley Street, Mayfair, London W1J 8DY</div>
@@ -360,15 +353,51 @@ function toggleMenu(){
     <p class="club-desc">
       High-end Mayfair lounge club – VIP tables, bottle shows and late-night party crowd.
     </p>
-    <a class="btn"
-       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Luxx%20Club."
-       target="_blank">Enquire via WhatsApp</a>
+    <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Luxx%20Club." target="_blank">
+      Enquire via WhatsApp
+    </a>
   </div>
 </section>
 
 <footer>
-  © 2025 ALPHA MAYFAIR — Explore London’s Exclusive Nightlife
+  <div class="footer-icons">
+    <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/447787672749" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
+  <p>© 2025 ALPHA MAYFAIR — Explore London’s Exclusive Nightlife</p>
 </footer>
+
+<a class="wa-bubble" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20book%20a%20night%20out%20in%20Mayfair." target="_blank" aria-label="Book now on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+// IntersectionObserver for fade-in blocks
+document.addEventListener('DOMContentLoaded', function(){
+  const blocks = document.querySelectorAll('.club-block');
+  if('IntersectionObserver' in window){
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.2});
+    blocks.forEach(b => observer.observe(b));
+  } else {
+    blocks.forEach(b => b.classList.add('visible'));
+  }
+});
+</script>
 
 </body>
 </html>
