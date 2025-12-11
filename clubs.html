@@ -6,210 +6,264 @@
 <title>Explore Nightclubs – Alpha Mayfair</title>
 
 <style>
-    :root {
-        --gold: #d4af37;
-        --bg: #000;
-        --muted: #bfbfbf;
-        --card-bg: #111;
-    }
-    body {
-        margin: 0;
-        background: var(--bg);
-        color: white;
-        font-family: Arial, sans-serif;
-    }
-    header {
-        text-align: center;
-        padding: 20px;
-    }
-    header img {
-        width: 180px;
-    }
-    h1 {
-        text-align: center;
-        margin-top: 10px;
-        text-transform: uppercase;
-        color: var(--gold);
-        letter-spacing: 2px;
-    }
+  :root {
+    --gold:#d4af37;
+    --bg:#000;
+    --muted:#d0d0d0;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+  }
+  header{
+    text-align:center;
+    padding:20px 16px 10px;
+  }
+  header img{
+    width:190px;
+    max-width:70%;
+  }
+  h1{
+    text-align:center;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--gold);
+    margin:6px 0 20px;
+    font-size:24px;
+  }
 
-    .grid {
-        display: grid;
-        gap: 20px;
-        padding: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+  .club-block{
+    position:relative;
+    min-height:260px;
+    display:flex;
+    align-items:flex-end;
+    padding:24px 18px;
+    margin:0 0 16px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+  .club-block::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1));
+  }
+  .club-content{
+    position:relative;
+    z-index:1;
+    max-width:520px;
+  }
+  .club-title{
+    margin:0 0 4px;
+    font-size:22px;
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing:1px;
+  }
+  .club-addr{
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .club-days{
+    font-size:13px;
+    margin-bottom:10px;
+  }
+  .club-desc{
+    font-size:14px;
+    margin-bottom:12px;
+  }
+  .btn{
+    display:inline-block;
+    padding:9px 16px;
+    background:var(--gold);
+    color:#000;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:13px;
+    text-transform:uppercase;
+  }
 
-    .card {
-        background: var(--card-bg);
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid rgba(212,175,55,0.25);
-    }
+  footer{
+    text-align:center;
+    padding:24px 16px 30px;
+    color:#777;
+    font-size:12px;
+  }
 
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
+  @media(min-width:768px){
+    .club-block{
+      min-height:320px;
+      padding:32px 40px;
+      margin-bottom:22px;
     }
-
-    .content {
-        padding: 16px;
-    }
-
-    .content h3 {
-        margin: 0;
-        color: var(--gold);
-        font-size: 22px;
-        text-transform: uppercase;
-    }
-
-    .content .addr {
-        font-size: 13px;
-        color: var(--muted);
-        margin: 6px 0;
-    }
-
-    .content .days {
-        font-size: 14px;
-        margin: 8px 0 12px;
-        color: white;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 10px 16px;
-        background: var(--gold);
-        color: black;
-        font-weight: bold;
-        border-radius: 6px;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 13px;
-    }
-
-    footer {
-        margin-top: 40px;
-        text-align: center;
-        color: #777;
-        padding: 30px 0;
-        font-size: 13px;
-    }
+    .club-title{font-size:26px;}
+  }
 </style>
 </head>
-
 <body>
 
 <header>
-    <img src="logo.png" alt="Alpha Mayfair Logo">
+  <img src="logo.png" alt="Alpha Mayfair logo">
 </header>
 
 <h1>Explore Mayfair Nightclubs</h1>
 
-<div class="grid">
+<!-- CIRQUE -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Cirque+Le+Soir');">
+  <div class="club-content">
+    <h2 class="club-title">Cirque Le Soir</h2>
+    <div class="club-addr">15–21 Ganton Street, Soho, London W1F 9BN</div>
+    <div class="club-days"><strong>Open:</strong> Monday · Wednesday · Friday · Saturday</div>
+    <p class="club-desc">
+      World-famous circus-themed nightclub with outrageous performances, bottle service and
+      a late-night crowd.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cirque%20Le%20Soir."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Cirque -->
-    <div class="card">
-        <img src="https://i.imgur.com/5vZTf3x.jpeg">
-        <div class="content">
-            <h3>Cirque Le Soir</h3>
-            <div class="addr">15–21 Ganton St, Soho, W1F 9BN</div>
-            <div class="days">Open: Mon · Wed · Fri · Sat</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20about%20Cirque%20Le%20Soir">Enquire</a>
-        </div>
-    </div>
+<!-- REIGN -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Reign+Showclub');">
+  <div class="club-content">
+    <h2 class="club-title">Reign Showclub</h2>
+    <div class="club-addr">215–217 Piccadilly, St. James’s, London W1J 9HN</div>
+    <div class="club-days"><strong>Open:</strong> Tuesday · Thursday · Friday · Saturday</div>
+    <p class="club-desc">
+      High-energy showclub with acrobats, dancers and full production. Perfect for big
+      celebrations and VIP tables.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Reign%20Showclub."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Reign -->
-    <div class="card">
-        <img src="https://i.imgur.com/NXiFQkP.jpeg">
-        <div class="content">
-            <h3>Reign Showclub</h3>
-            <div class="addr">215–217 Piccadilly, W1J 9HN</div>
-            <div class="days">Open: Tue · Thu · Fri · Sat</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20about%20Reign%20Showclub">Enquire</a>
-        </div>
-    </div>
+<!-- TAPE -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Tape+London');">
+  <div class="club-content">
+    <h2 class="club-title">Tape London</h2>
+    <div class="club-addr">17 Hanover Square, Mayfair, London W1S 1HU</div>
+    <div class="club-days"><strong>Open:</strong> Tuesday · Friday · Saturday · Sunday</div>
+    <p class="club-desc">
+      Iconic music-led nightclub with celebrity DJs and late-night afterparties.
+      Think hip-hop, R&B and Afrobeats.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tape%20London."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Tape -->
-    <div class="card">
-        <img src="https://i.imgur.com/4z0YI32.jpeg">
-        <div class="content">
-            <h3>Tape London</h3>
-            <div class="addr">17 Hanover Square, W1S 1HU</div>
-            <div class="days">Open: Tue · Fri · Sat · Sun</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20More%20info%20on%20Tape%20London">Enquire</a>
-        </div>
-    </div>
+<!-- TABU -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Tabu+London');">
+  <div class="club-content">
+    <h2 class="club-title">TABŪ London</h2>
+    <div class="club-addr">1 Dover Street, Mayfair, London W1S 4LD</div>
+    <div class="club-days"><strong>Open:</strong> Wednesday · Thursday · Friday · Saturday</div>
+    <p class="club-desc">
+      Stylish Mayfair hotspot with bold shows, strong music and a luxury bottle-service crowd.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Tabu."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- TABU -->
-    <div class="card">
-        <img src="https://i.imgur.com/88QcdHp.jpeg">
-        <div class="content">
-            <h3>TABŪ London</h3>
-            <div class="addr">1 Dover Street, W1S 4LD</div>
-            <div class="days">Open: Wed · Thu · Fri · Sat</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20Tell%20me%20about%20Tabu%20London">Enquire</a>
-        </div>
-    </div>
+<!-- CUCKOO -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Cuckoo+Club');">
+  <div class="club-content">
+    <h2 class="club-title">The Cuckoo Club</h2>
+    <div class="club-addr">Swallow Street, Mayfair, London W1B</div>
+    <div class="club-days"><strong>Open:</strong> Wednesday · Friday · Saturday</div>
+    <p class="club-desc">
+      Intimate, glamorous Mayfair venue with deep-house, R&B and a stylish members-style crowd.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Cuckoo%20Club."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Cuckoo -->
-    <div class="card">
-        <img src="https://i.imgur.com/dgl5hFf.jpeg">
-        <div class="content">
-            <h3>Cuckoo Club</h3>
-            <div class="addr">Swallow Street, Mayfair, W1B</div>
-            <div class="days">Open: Wed · Fri · Sat</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20Cuckoo%20Club%20info%20please">Enquire</a>
-        </div>
-    </div>
+<!-- DEAR DARLING -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Dear+Darling');">
+  <div class="club-content">
+    <h2 class="club-title">Dear Darling</h2>
+    <div class="club-addr">91 Jermyn Street, St. James’s, London SW1Y 6JB</div>
+    <div class="club-days"><strong>Open:</strong> Thursday · Friday · Saturday · Sunday</div>
+    <p class="club-desc">
+      Elegant bar & lounge – ideal for pre-drinks, birthdays and relaxed Mayfair nights before or after the club.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20guestlist/table%20for%20Dear%20Darling."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Dear Darling -->
-    <div class="card">
-        <img src="https://i.imgur.com/tWW0loc.jpeg">
-        <div class="content">
-            <h3>Dear Darling</h3>
-            <div class="addr">91 Jermyn Street, SW1Y 6JB</div>
-            <div class="days">Open: Thu · Fri · Sat · Sun</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20More%20info%20on%20Dear%20Darling">Enquire</a>
-        </div>
-    </div>
+<!-- INCA / LUNA -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=INCA+%2F+Luna');">
+  <div class="club-content">
+    <h2 class="club-title">INCA / Luna</h2>
+    <div class="club-addr">8–9 Argyll Street, London W1F 7TF</div>
+    <div class="club-days"><strong>Open:</strong> Friday · Saturday · Sunday</div>
+    <p class="club-desc">
+      Latin-inspired restaurant and late-night venue by the Palladium – perfect for dinner + party combos.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20INCA%20or%20Luna."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- INCA/Luna -->
-    <div class="card">
-        <img src="https://i.imgur.com/6i1JebZ.jpeg">
-        <div class="content">
-            <h3>INCA / Luna</h3>
-            <div class="addr">8–9 Argyll St, Soho, W1F 7TF</div>
-            <div class="days">Open: Fri · Sat · Sun</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20INCA%20or%20Luna%20info">Enquire</a>
-        </div>
-    </div>
+<!-- SELENE -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Selene+London');">
+  <div class="club-content">
+    <h2 class="club-title">Selene London</h2>
+    <div class="club-addr">4 Winsley Street, London W1W 8HF</div>
+    <div class="club-days"><strong>Open:</strong> Friday · Saturday · Sunday (events)</div>
+    <p class="club-desc">
+      Boutique club and event space with curated music nights & themed parties.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Selene."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Selene -->
-    <div class="card">
-        <img src="https://i.imgur.com/vzD0lfK.jpeg">
-        <div class="content">
-            <h3>Selene London</h3>
-            <div class="addr">4 Winsley St, W1W 8HF</div>
-            <div class="days">Open: Fri · Sat · Sun</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20Info%20on%20Selene%20London">Enquire</a>
-        </div>
-    </div>
+<!-- LUXX -->
+<section class="club-block"
+  style="background-image:url('https://via.placeholder.com/1200x800?text=Luxx+Club');">
+  <div class="club-content">
+    <h2 class="club-title">Luxx Club</h2>
+    <div class="club-addr">15 Berkeley Street, Mayfair, London W1J 8DY</div>
+    <div class="club-days"><strong>Open:</strong> Friday · Saturday</div>
+    <p class="club-desc">
+      High-end Mayfair lounge club – VIP tables, bottle shows and late-night party crowd.
+    </p>
+    <a class="btn"
+       href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20info%20and%20table/guestlist%20for%20Luxx%20Club."
+       target="_blank">Enquire via WhatsApp</a>
+  </div>
+</section>
 
-    <!-- Luxx -->
-    <div class="card">
-        <img src="https://i.imgur.com/V5zOfEd.jpeg">
-        <div class="content">
-            <h3>Luxx Club</h3>
-            <div class="addr">15 Berkeley Street, W1J 8DY</div>
-            <div class="days">Open: Fri · Sat</div>
-            <a class="btn" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20Tell%20me%20about%20Luxx">Enquire</a>
-        </div>
-    </div>
-
-</div>
-
-<footer>© 2025 ALPHA MAYFAIR — Exclusive Mayfair Nightlife</footer>
+<footer>
+  © 2025 ALPHA MAYFAIR — Explore London’s Exclusive Nightlife
+</footer>
 
 </body>
 </html>
