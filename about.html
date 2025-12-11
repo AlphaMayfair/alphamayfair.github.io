@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Alpha Mayfair – VIP Nightlife Concierge</title>
+
+<!-- SEO -->
+<meta name="description" content="Learn about Alpha Mayfair, a London-based nightlife concierge specialising in VIP tables, guestlists and curated experiences in Mayfair’s top clubs.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Alpha Mayfair">
+<meta property="og:description" content="Alpha Mayfair hosts and curates luxury nightlife experiences across London’s top Mayfair clubs.">
+<meta property="og:image" content="logo.png">
+
+<style>
+  :root { --gold:#d4af37; --bg:#000; --muted:#d0d0d0; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif;}
+
+  /* NAVBAR */
+  .navbar{
+    width:100%; background:#000;
+    border-bottom:1px solid rgba(212,175,55,0.3);
+    padding:14px 0;
+    position:sticky; top:0; z-index:9999;
+  }
+  .nav-container{
+    max-width:1200px; margin:auto; padding:0 22px;
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .nav-logo{
+    color:var(--gold); text-decoration:none;
+    font-size:22px; font-weight:900; letter-spacing:1px;
+  }
+  .nav-links a{
+    color:white; text-decoration:none;
+    margin-left:22px; text-transform:uppercase;
+    font-size:14px; font-weight:600; opacity:.85;
+  }
+  .nav-links a:hover{color:var(--gold); opacity:1;}
+  .hamburger{
+    width:30px; height:22px; display:none;
+    flex-direction:column; justify-content:space-between;
+    cursor:pointer;
+  }
+  .hamburger span{
+    height:3px; background:var(--gold); border-radius:3px;
+  }
+  @media(max-width:760px){
+    .hamburger{display:flex;}
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0;
+      background:#000; padding:20px 0;
+      display:none; flex-direction:column; align-items:center;
+      border-bottom:1px solid rgba(212,175,55,0.25);
+    }
+    .nav-links.open{display:flex;}
+    .nav-links a{margin:12px 0; font-size:16px;}
+  }
+
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:32px 20px 60px;
+    animation:fadeUp 0.9s ease forwards;
+    opacity:0;
+  }
+  header{
+    text-align:center;
+    margin-bottom:20px;
+  }
+  header img{
+    width:210px;
+    max-width:80%;
+  }
+  h1{
+    text-align:center;
+    margin-top:10px;
+    font-size:26px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--gold);
+  }
+  .divider{
+    width:80px; height:2px;
+    background:var(--gold);
+    margin:18px auto 26px;
+  }
+  p{font-size:15px;line-height:1.7;color:#eee;margin-bottom:14px;}
+  h2{
+    margin-top:30px;
+    font-size:20px;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+  ul{margin:10px 0 10px 22px;}
+  li{margin-bottom:8px;color:#eee;}
+  .cta{
+    margin-top:26px;
+    text-align:center;
+  }
+  .cta a{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:30px;
+    background:var(--gold);
+    color:#000;
+    text-decoration:none;
+    font-weight:800;
+    text-transform:uppercase;
+    font-size:14px;
+  }
+  .cta a:hover{
+    box-shadow:0 0 16px rgba(212,175,55,0.9);
+  }
+
+  footer{
+    text-align:center;
+    padding:24px 16px 50px;
+    color:#777;
+    font-size:12px;
+    border-top:1px solid #111;
+  }
+  .footer-icons a img{
+    width:26px; margin:0 8px; vertical-align:middle;
+  }
+
+  .wa-bubble{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.7);
+    z-index:10000;
+    text-decoration:none;
+  }
+  .wa-bubble img{
+    width:30px;
+    height:30px;
+  }
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="book.html">Book a Table</a>
+      <a href="guestlist.html">Guestlist</a>
+      <a href="clubs.html">Nightclubs</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header>
+    <img src="logo.jpg" alt="Alpha Mayfair logo">
+  </header>
+
+  <h1>About Alpha Mayfair</h1>
+  <div class="divider"></div>
+
+  <p>
+    Alpha Mayfair is a London-based nightlife host and concierge service specialising in exclusive
+    Mayfair venues. From VIP tables and bottle shows to curated guestlists and private celebrations,
+    we connect you with the city’s most in-demand clubs and events.
+  </p>
+
+  <p>
+    Our focus is simple: <strong>smooth entry, premium hosting and unforgettable nights</strong> in London’s
+    most iconic nightlife district.
+  </p>
+
+  <h2>What We Do</h2>
+  <ul>
+    <li>VIP table reservations at Mayfair’s top clubs (Cirque, Reign, Tape, TABŪ, Cuckoo & more)</li>
+    <li>Girls’ guestlists and promoter tables with complimentary drinks in selected venues</li>
+    <li>Birthday, celebration and group night planning</li>
+    <li>Advice on the best club for your date, music taste and group size</li>
+  </ul>
+
+  <h2>Our Venues</h2>
+  <p>
+    We regularly host across a curated selection of Mayfair and central London hotspots including:
+    Cirque Le Soir, Reign Showclub, Tape London, TABŪ, The Cuckoo Club, Dear Darling, INCA / Luna,
+    Selene and Luxx Club.
+  </p>
+
+  <h2>How It Works</h2>
+  <ul>
+    <li>Send us your date, preferred club and group size via WhatsApp or the booking forms.</li>
+    <li>We confirm availability, table options and minimum spends (if applicable).</li>
+    <li>On the night, you arrive to a hosted experience – with smooth entry and guidance.</li>
+  </ul>
+
+  <div class="cta">
+    <a href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20tell%20me%20more%20about%20your%20services." target="_blank">
+      Chat to Us on WhatsApp
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-icons">
+    <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/447787672749" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
+  <p>© 2025 ALPHA MAYFAIR — London Nightlife Concierge</p>
+</footer>
+
+<a class="wa-bubble" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20plan%20a%20night%20out." target="_blank" aria-label="Book now on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
