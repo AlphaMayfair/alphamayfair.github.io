@@ -5,53 +5,79 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join Guestlist – Alpha Mayfair</title>
 
+<!-- NAV BAR STYLES -->
 <style>
   :root { --gold:#d4af37; }
   * { margin:0; padding:0; box-sizing:border-box; }
 
   /* NAV BAR */
   .navbar {
-    width:100%; background:#000;
+    width:100%;
+    background:#000;
     border-bottom:1px solid rgba(212,175,55,0.3);
     padding:14px 0;
-    position:sticky; top:0; z-index:9999;
+    position:sticky;
+    top:0;
+    z-index:9999;
   }
   .nav-container {
-    max-width:1200px; margin:auto;
+    max-width:1200px;
+    margin:auto;
     padding:0 22px;
-    display:flex; justify-content:space-between; align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
   }
   .nav-logo {
-    color:var(--gold); font-weight:900; font-size:22px;
-    text-decoration:none; letter-spacing:1px;
+    color:var(--gold);
+    text-decoration:none;
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:1px;
   }
   .nav-links a {
-    color:white; text-decoration:none;
-    margin-left:22px; text-transform:uppercase;
-    font-size:14px; opacity:.85; font-weight:600;
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:600;
+    opacity:.85;
   }
-  .nav-links a:hover { color:var(--gold); opacity:1; }
+  .nav-links a:hover {
+    color:var(--gold);
+    opacity:1;
+  }
 
-  /* MOBILE MENU */
+  /* HAMBURGER MENU */
   .hamburger {
-    width:30px; height:22px; display:none;
-    flex-direction:column; justify-content:space-between;
+    width:30px;
+    height:22px;
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
     cursor:pointer;
   }
   .hamburger span {
-    height:3px; background:var(--gold); border-radius:3px;
+    height:3px;
+    background:var(--gold);
+    border-radius:3px;
   }
+
   @media(max-width:760px){
-    .hamburger{display:flex;}
-    .nav-links{
-      position:absolute; top:100%; left:0; right:0;
-      background:#000; padding:20px 0; 
-      flex-direction:column; align-items:center;
+    .hamburger { display:flex; }
+    .nav-links {
+      position:absolute;
+      top:100%; left:0; right:0;
+      background:#000;
+      padding:20px 0;
+      flex-direction:column;
+      align-items:center;
       border-bottom:1px solid rgba(212,175,55,0.25);
       display:none;
     }
-    .nav-links.open{display:flex;}
-    .nav-links a{margin:12px 0; font-size:16px;}
+    .nav-links.open { display:flex; }
+    .nav-links a { margin:12px 0; font-size:16px; }
   }
 </style>
 
@@ -61,34 +87,33 @@ function toggleMenu(){
 }
 </script>
 
-<!-- YOUR ORIGINAL PAGE STYLE BELOW (UNCHANGED) -->
+<!-- YOUR ORIGINAL PAGE STYLES BELOW -->
 <style>
-  :root { --gold:#d4af37; --bg:#000; --muted:#d0d0d0; }
-  body { background:#000; color:white; font-family:Arial; }
-  .wrap { max-width:900px; margin:0 auto; padding:20px; }
-  h1,h2 { text-align:center; text-transform:uppercase; font-weight:800; }
-  p { font-size:15px; line-height:1.6; margin:10px 0; color:#eee; }
-  ul { margin:10px 0 10px 26px; color:#eee; font-size:15px; }
-  li { margin-bottom:6px; }
-
-  .form-box {
-    margin-top:20px; background:#111;
-    border-radius:10px; padding:18px 16px 26px;
+  :root{--gold:#d4af37;--bg:#000;--muted:#d0d0d0}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:28px 18px}
+  h1,h2{text-align:center;text-transform:uppercase;font-weight:800}
+  h1{margin-top:10px;font-size:26px}
+  h2{margin-top:30px;font-size:20px}
+  p{font-size:15px;line-height:1.6;margin:10px 0;color:#eee}
+  .section{margin-bottom:26px}
+  ul{margin:10px 0 10px 26px;color:#eee;font-size:15px}
+  li{margin-bottom:6px}
+  .form-box{
+    margin-top:20px;background:#111;border-radius:10px;padding:18px 16px 26px;
     border:1px solid rgba(212,175,55,0.4);
   }
-  .form-box input, .form-box textarea {
-    width:100%; padding:12px; margin:6px 0 12px;
-    border-radius:4px; border:none;
-    font-size:14px; background:#000; color:#fff;
-    border:1px solid #333;
+  .form-box input,.form-box textarea{
+    width:100%;padding:12px;margin:6px 0 12px;border-radius:4px;border:none;
+    font-size:14px;background:#000;color:#fff;border:1px solid #333;
   }
-  .form-box button {
-    width:100%; padding:14px; background:var(--gold);
-    border:none; border-radius:4px; color:#000;
-    font-weight:800; cursor:pointer;
-    text-transform:uppercase;
+  .form-box button{
+    width:100%;padding:14px;background:var(--gold);border:none;border-radius:4px;
+    text-transform:uppercase;font-weight:800;font-size:14px;cursor:pointer;color:#000;
   }
-  footer { text-align:center; color:#666; margin-top:32px; padding-bottom:20px; }
+  .fineprint{font-size:11px;color:var(--muted);text-align:center;margin-top:8px}
+  footer{text-align:center;color:#666;font-size:12px;margin-top:32px;padding-bottom:20px}
 </style>
 </head>
 
@@ -97,6 +122,7 @@ function toggleMenu(){
 <!-- NAV BAR -->
 <nav class="navbar">
   <div class="nav-container">
+
     <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
 
     <div class="nav-links" id="navLinks">
@@ -109,49 +135,90 @@ function toggleMenu(){
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
+
   </div>
 </nav>
 
 
-<!-- YOUR ORIGINAL GUESTLIST CONTENT BELOW (UNCHANGED) -->
+
+<!-- YOUR ORIGINAL PAGE CONTENT BELOW (UNCHANGED) -->
+
 <div class="wrap">
+  <h1>London Club Guestlist</h1>
 
-<h1>London Club Guestlist</h1>
+  <div class="section">
+    <h2>London Club Guestlist</h2>
+    <p>
+      Exclusive Mayfair nightclubs are the place to be if you’re looking to join a London guestlist
+      and make your night unforgettable. Perfect for a girls’ night out, birthdays, or a luxury
+      weekend in the city.
+    </p>
+    <p>
+      Expect elegant parties, exclusive after-parties, a sophisticated crowd and of course
+      celebrities and artist performances – one extraordinary night after the other in Mayfair.
+    </p>
+    <p>
+      To join guestlist in London with Alpha Mayfair, there’s no cost – we’ll guide you through the
+      whole process and recommend the best club for your date.
+    </p>
+  </div>
 
-<div class="section">
-  <h2>London Club Guestlist</h2>
-  <p>Exclusive Mayfair nightclubs are…</p>
-  <p>…your full content remains untouched…</p>
+  <div class="section">
+    <h2>What Does a London Club Guestlist Include?</h2>
+    <p>Joining the guestlist typically means:</p>
+    <ul>
+      <li>Access to the club for an entry fee (£0–£20 depending on event)</li>
+      <li>Complimentary drinks or bottles for many ladies’ groups</li>
+      <li>A promoter table shared with other girls on guestlist</li>
+      <li>A host at the club to look after you during your night</li>
+    </ul>
+    <p>If you’re unsure which club to choose, message us — we’ll help.</p>
+  </div>
+
+  <div class="section">
+    <h2>Join a London Club Guestlist</h2>
+    <div class="form-box">
+      <input id="name" placeholder="Full name*" required>
+      <input id="email" type="email" placeholder="Email*" required>
+      <input id="whatsapp" placeholder="WhatsApp number*" required>
+      <input id="instagram" placeholder="Instagram @*" required>
+      <input id="birthday" placeholder="Birthday (DD/MM/YYYY)*" required>
+      <input id="date" type="date" required>
+      <textarea id="more" rows="4" placeholder="Tell us more… (club preference, guests, occasion)"></textarea>
+
+      <button onclick="sendGuestlist()">Join Guestlist</button>
+
+      <div class="fineprint">
+        By clicking ‘JOIN GUESTLIST’ you agree that Alpha Mayfair may contact you about your booking.
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 ALPHA MAYFAIR — Guestlist & VIP Tables</footer>
 </div>
-
-<!-- Your full guestlist page content continues exactly as you provided it -->
-
-</div>
-
-<footer>© 2025 ALPHA MAYFAIR — Guestlist & VIP Tables</footer>
 
 <script>
-  (function(){
-    const d = new Date();
-    const m = ("0"+(d.getMonth()+1)).slice(-2);
-    const day = ("0"+d.getDate()).slice(-2);
-    document.getElementById("date").min = `${d.getFullYear()}-${m}-${day}`;
-  })();
+(function(){
+  const d=new Date(),m=("0"+(d.getMonth()+1)).slice(-2),day=("0"+d.getDate()).slice(-2);
+  const min=d.getFullYear()+"-"+m+"-"+day;
+  document.getElementById("date").min=min;
+})();
 
-  function sendGuestlist(){
-    const name = encodeURIComponent(document.getElementById("name").value);
-    const email = encodeURIComponent(document.getElementById("email").value);
-    const whatsapp = encodeURIComponent(document.getElementById("whatsapp").value);
-    const instagram = encodeURIComponent(document.getElementById("instagram").value);
-    const birthday = encodeURIComponent(document.getElementById("birthday").value);
-    const date = encodeURIComponent(document.getElementById("date").value);
-    const more = encodeURIComponent(document.getElementById("more").value);
+function sendGuestlist(){
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const email = encodeURIComponent(document.getElementById('email').value);
+  const waNum = encodeURIComponent(document.getElementById('whatsapp').value);
+  const ig = encodeURIComponent(document.getElementById('instagram').value);
+  const bday = encodeURIComponent(document.getElementById('birthday').value);
+  const date = encodeURIComponent(document.getElementById('date').value);
+  const more = encodeURIComponent(document.getElementById('more').value);
 
-    const msg =
-      `Hi Alpha Mayfair, I'd like to join the guestlist.%0AName: ${name}%0AEmail: ${email}%0AWhatsApp: ${whatsapp}%0AInstagram: ${instagram}%0ABirthday: ${birthday}%0ADate: ${date}%0AMessage: ${more}`;
+  const msg =
+    `Hi Alpha Mayfair, I’d like to join the guestlist.%0A` +
+    `Name: ${name}%0AEmail: ${email}%0AWhatsApp: ${waNum}%0AInstagram: ${ig}%0ABirthday: ${bday}%0ADate: ${date}%0ADetails: ${more}`;
 
-    window.open(`https://wa.me/447787672749?text=${msg}`, "_blank");
-  }
+  window.open(`https://wa.me/447787672749?text=${msg}`,'_blank');
+}
 </script>
 
 </body>
