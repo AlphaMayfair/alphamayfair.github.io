@@ -3,199 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpha Mayfair – London VIP Nightlife</title>
+<title>Alpha Mayfair – London VIP Nightlife & Mayfair Clubs</title>
+
+<!-- SEO -->
+<meta name="description" content="Alpha Mayfair offers VIP tables, guestlist and luxury nightlife hosting at London’s top Mayfair clubs including Cirque Le Soir, Reign, Tape, Tabu, Cuckoo, Dear Darling, INCA, Selene and Luxx.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alpha Mayfair – London VIP Nightlife">
+<meta property="og:description" content="Book VIP tables, join guestlists and explore the most exclusive Mayfair clubs with Alpha Mayfair.">
+<meta property="og:image" content="logo.png">
 
 <style>
-    :root {
-        --gold: #d4af37;
-        --bg: #000;
-        --muted: #bfbfbf;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-        background: var(--bg);
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+  :root {
+    --gold: #d4af37;
+    --bg: #000;
+    --muted: #cfcfcf;
+  }
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body {
+    background: var(--bg);
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
-    /* NAVIGATION */
-    .navbar {
-        width: 100%;
-        background: #000;
-        border-bottom: 1px solid rgba(212,175,55,0.3);
-        padding: 14px 0;
-        position: sticky;
-        top: 0;
-        z-index: 9999;
-    }
-    .nav-container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 0 22px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .nav-logo {
-        color: var(--gold);
-        text-decoration: none;
-        font-weight: 900;
-        font-size: 22px;
-        letter-spacing: 1px;
-    }
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        margin-left: 22px;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 600;
-        opacity: 0.85;
-    }
-    .nav-links a:hover { color: var(--gold); opacity: 1; }
+  /* NAVBAR */
+  .navbar {
+    width:100%;
+    background:#000;
+    border-bottom:1px solid rgba(212,175,55,0.3);
+    padding:14px 0;
+    position:sticky;
+    top:0;
+    z-index:9999;
+  }
+  .nav-container {
+    max-width:1200px;
+    margin:auto;
+    padding:0 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .nav-logo {
+    color:var(--gold);
+    text-decoration:none;
+    font-weight:900;
+    font-size:22px;
+    letter-spacing:1px;
+  }
+  .nav-links a {
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    text-transform:uppercase;
+    font-size:14px;
+    font-weight:600;
+    opacity:.85;
+  }
+  .nav-links a:hover { color:var(--gold); opacity:1; }
 
-    /* MOBILE MENU */
-    .hamburger {
-        width: 30px;
-        height: 22px;
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
+  .hamburger {
+    width:30px;
+    height:22px;
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    cursor:pointer;
+  }
+  .hamburger span {
+    height:3px;
+    background:var(--gold);
+    border-radius:3px;
+  }
+  @media(max-width:760px){
+    .hamburger{display:flex;}
+    .nav-links{
+      position:absolute;
+      top:100%; left:0; right:0;
+      background:#000;
+      padding:20px 0;
+      display:none;
+      flex-direction:column;
+      align-items:center;
+      border-bottom:1px solid rgba(212,175,55,0.25);
     }
-    .hamburger span {
-        height: 3px;
-        background: var(--gold);
-        border-radius: 3px;
-    }
-    @media(max-width: 760px) {
-        .hamburger { display: flex; }
-        .nav-links {
-            position: absolute;
-            top: 100%; right: 0; width: 100%;
-            background: #000;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(212,175,55,0.25);
-        }
-        .nav-links.open { display: flex; }
-        .nav-links a { margin: 12px 0; font-size: 16px; }
-    }
+    .nav-links.open{display:flex;}
+    .nav-links a{margin:12px 0; font-size:16px;}
+  }
 
-    /* HERO SECTION */
-    .hero {
-        text-align: center;
-        padding: 80px 20px 60px;
-    }
-    .hero img {
-        width: 260px;
-        max-width: 80%;
-        margin-bottom: 30px;
-    }
-    .hero h1 {
-        font-size: 28px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 26px;
-        color: white;
-    }
-    .divider {
-        width: 80px;
-        height: 2px;
-        background: var(--gold);
-        margin: 20px auto;
-    }
-    .hero-sub {
-        max-width: 700px;
-        margin: 20px auto 40px;
-        font-size: 17px;
-        line-height: 1.6;
-        color: var(--muted);
-    }
+  /* HERO */
+  .hero {
+    text-align:center;
+    padding:80px 20px 60px;
+    animation: fadeIn 1s ease-out;
+  }
+  .hero img {
+    width:260px;
+    max-width:80%;
+    margin-bottom:30px;
+  }
+  .hero h1 {
+    font-size:28px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:26px;
+  }
+  .divider {
+    width:80px;
+    height:2px;
+    background:var(--gold);
+    margin:20px auto;
+  }
+  .hero-sub {
+    max-width:700px;
+    margin:20px auto 40px;
+    font-size:17px;
+    line-height:1.6;
+    color:var(--muted);
+  }
+  .cta-wrap {
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    margin:40px auto;
+    max-width:420px;
+  }
+  .cta-btn {
+    text-decoration:none;
+    text-align:center;
+    padding:14px;
+    background:var(--gold);
+    color:black;
+    font-weight:800;
+    font-size:15px;
+    border-radius:30px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+  }
+  .cta-btn:hover { opacity:.85; }
 
-    /* CTA BUTTONS */
-    .cta-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin: 40px auto;
-        max-width: 420px;
-    }
-    .cta-btn {
-        text-decoration: none;
-        text-align: center;
-        padding: 14px;
-        background: var(--gold);
-        color: black;
-        font-weight: 800;
-        font-size: 15px;
-        border-radius: 30px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+  footer {
+    margin-top:50px;
+    padding:30px 20px 50px;
+    text-align:center;
+    color:#777;
+    font-size:13px;
+    border-top:1px solid #111;
+  }
+  .footer-icons{
+    margin-bottom:8px;
+  }
+  .footer-icons a img{
+    width:26px;
+    margin:0 8px;
+    vertical-align:middle;
+  }
 
-    .cta-btn:hover { opacity: 0.85; }
+  /* WHATSAPP FLOATING BUBBLE (Book Now) */
+  .wa-bubble{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.7);
+    z-index:10000;
+    text-decoration:none;
+  }
+  .wa-bubble img{
+    width:30px;
+    height:30px;
+  }
 
-    footer {
-        margin-top: 50px;
-        padding: 30px;
-        text-align: center;
-        color: #777;
-        font-size: 13px;
-    }
+  @keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
+  }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
       <a href="guestlist.html">Guestlist</a>
       <a href="clubs.html">Nightclubs</a>
+      <a href="about.html">About</a>
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-    <img src="logo.jpg" alt="Alpha Mayfair Logo">
-
-    <h1>London’s Most Exclusive Nightlife Experience</h1>
-
-    <div class="divider"></div>
-
-    <p class="hero-sub">
-        VIP Tables, Guestlists, Luxury Events & Exclusive Mayfair Nightclubs.
-        Alpha Mayfair connects you with London’s top venues: Cirque, Tape, Reign, Tabu,
-        Cuckoo, Dear Darling, INCA, Selene & more.
-    </p>
-
-    <div class="cta-wrap">
-        <a href="book.html" class="cta-btn">Book a Table</a>
-        <a href="guestlist.html" class="cta-btn">Join Guestlist</a>
-        <a href="clubs.html" class="cta-btn">Explore Nightclubs</a>
-    </div>
+  <img src="logo.png" alt="Alpha Mayfair Logo">
+  <h1>London’s Most Exclusive Nightlife Experience</h1>
+  <div class="divider"></div>
+  <p class="hero-sub">
+    VIP Tables, Guestlists, Luxury Events & curated Mayfair nightlife. Alpha Mayfair connects you
+    with London’s top venues: Cirque Le Soir, Tape, Reign, Tabu, Cuckoo, Dear Darling, INCA, Selene & Luxx.
+  </p>
+  <div class="cta-wrap">
+    <a href="book.html" class="cta-btn">Book a Table</a>
+    <a href="guestlist.html" class="cta-btn">Join Guestlist</a>
+    <a href="clubs.html" class="cta-btn">Explore Nightclubs</a>
+  </div>
 </section>
 
 <footer>
-    © 2025 Alpha Mayfair — VIP Host & Luxury Nightlife
+  <div class="footer-icons">
+    <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/447787672749" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
+  <p>© 2025 Alpha Mayfair — VIP Host & Luxury Nightlife</p>
 </footer>
 
+<a class="wa-bubble" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20book%20a%20night%20out." target="_blank" aria-label="Book now on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
 <script>
-function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("open");
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
 }
 </script>
 
