@@ -5,99 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join Guestlist – Alpha Mayfair</title>
 
-<!-- NAV BAR STYLES -->
+<!-- SEO -->
+<meta name="description" content="Join the guestlist for London’s most exclusive Mayfair clubs with Alpha Mayfair. Ladies guestlists, promoter tables, VIP hosting and more.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="London Club Guestlist – Alpha Mayfair">
+<meta property="og:description" content="Apply to join guestlists at Cirque, Reign, Tape, Tabu, Cuckoo, Dear Darling, INCA, Selene and Luxx.">
+<meta property="og:image" content="logo.png">
+
 <style>
-  :root { --gold:#d4af37; }
+  :root { --gold:#d4af37; --bg:#000; --muted:#d0d0d0; }
   * { margin:0; padding:0; box-sizing:border-box; }
 
-  /* NAV BAR */
-  .navbar {
-    width:100%;
-    background:#000;
+  /* NAVBAR */
+  .navbar{
+    width:100%; background:#000;
     border-bottom:1px solid rgba(212,175,55,0.3);
     padding:14px 0;
-    position:sticky;
-    top:0;
-    z-index:9999;
+    position:sticky; top:0; z-index:9999;
   }
-  .nav-container {
-    max-width:1200px;
-    margin:auto;
-    padding:0 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+  .nav-container{
+    max-width:1200px; margin:auto; padding:0 22px;
+    display:flex; justify-content:space-between; align-items:center;
   }
-  .nav-logo {
-    color:var(--gold);
-    text-decoration:none;
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:1px;
+  .nav-logo{
+    color:var(--gold); text-decoration:none;
+    font-size:22px; font-weight:900; letter-spacing:1px;
   }
-  .nav-links a {
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    text-transform:uppercase;
-    font-size:14px;
-    font-weight:600;
-    opacity:.85;
+  .nav-links a{
+    color:white; text-decoration:none;
+    margin-left:22px; text-transform:uppercase;
+    font-size:14px; font-weight:600; opacity:.85;
   }
-  .nav-links a:hover {
-    color:var(--gold);
-    opacity:1;
-  }
-
-  /* HAMBURGER MENU */
-  .hamburger {
-    width:30px;
-    height:22px;
-    display:none;
-    flex-direction:column;
-    justify-content:space-between;
+  .nav-links a:hover{color:var(--gold); opacity:1;}
+  .hamburger{
+    width:30px; height:22px; display:none;
+    flex-direction:column; justify-content:space-between;
     cursor:pointer;
   }
-  .hamburger span {
-    height:3px;
-    background:var(--gold);
-    border-radius:3px;
+  .hamburger span{
+    height:3px; background:var(--gold); border-radius:3px;
   }
-
   @media(max-width:760px){
-    .hamburger { display:flex; }
-    .nav-links {
-      position:absolute;
-      top:100%; left:0; right:0;
-      background:#000;
-      padding:20px 0;
-      flex-direction:column;
-      align-items:center;
+    .hamburger{display:flex;}
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0;
+      background:#000; padding:20px 0;
+      display:none; flex-direction:column; align-items:center;
       border-bottom:1px solid rgba(212,175,55,0.25);
-      display:none;
     }
-    .nav-links.open { display:flex; }
-    .nav-links a { margin:12px 0; font-size:16px; }
+    .nav-links.open{display:flex;}
+    .nav-links a{margin:12px 0; font-size:16px;}
   }
-</style>
 
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
-}
-</script>
-
-<!-- YOUR ORIGINAL PAGE STYLES BELOW -->
-<style>
-  :root{--gold:#d4af37;--bg:#000;--muted:#d0d0d0}
-  *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}
   .wrap{max-width:900px;margin:0 auto;padding:28px 18px}
   h1,h2{text-align:center;text-transform:uppercase;font-weight:800}
   h1{margin-top:10px;font-size:26px}
   h2{margin-top:30px;font-size:20px}
   p{font-size:15px;line-height:1.6;margin:10px 0;color:#eee}
-  .section{margin-bottom:26px}
+  .section{margin-bottom:26px; animation:fadeUp 0.9s ease forwards; opacity:0;}
+  .section:nth-of-type(1){animation-delay:0.1s;}
+  .section:nth-of-type(2){animation-delay:0.2s;}
+  .section:nth-of-type(3){animation-delay:0.3s;}
+
   ul{margin:10px 0 10px 26px;color:#eee;font-size:15px}
   li{margin-bottom:6px}
   .form-box{
@@ -112,36 +83,58 @@ function toggleMenu(){
     width:100%;padding:14px;background:var(--gold);border:none;border-radius:4px;
     text-transform:uppercase;font-weight:800;font-size:14px;cursor:pointer;color:#000;
   }
+  .form-box button:hover{
+    box-shadow:0 0 12px rgba(212,175,55,0.7);
+  }
   .fineprint{font-size:11px;color:var(--muted);text-align:center;margin-top:8px}
-  footer{text-align:center;color:#666;font-size:12px;margin-top:32px;padding-bottom:20px}
+  footer{text-align:center;color:#666;font-size:12px;margin-top:32px;padding:20px 20px 50px;border-top:1px solid #111}
+  .footer-icons a img{
+    width:26px; margin:0 8px; vertical-align:middle;
+  }
+
+  .wa-bubble{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.7);
+    z-index:10000;
+    text-decoration:none;
+  }
+  .wa-bubble img{
+    width:30px;
+    height:30px;
+  }
+
+  @keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+  }
 </style>
 </head>
-
 <body>
 
-<!-- NAV BAR -->
 <nav class="navbar">
   <div class="nav-container">
-
     <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
       <a href="guestlist.html">Guestlist</a>
       <a href="clubs.html">Nightclubs</a>
+      <a href="about.html">About</a>
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
-
   </div>
 </nav>
-
-
-
-<!-- YOUR ORIGINAL PAGE CONTENT BELOW (UNCHANGED) -->
 
 <div class="wrap">
   <h1>London Club Guestlist</h1>
@@ -167,7 +160,7 @@ function toggleMenu(){
     <h2>What Does a London Club Guestlist Include?</h2>
     <p>Joining the guestlist typically means:</p>
     <ul>
-      <li>Access to the club for an entry fee (£0/£10/£20 depending on event)</li>
+      <li>Access to the club for an entry fee (£0–£20 depending on event)</li>
       <li>Complimentary drinks or bottles for many ladies’ groups</li>
       <li>A promoter table shared with other girls on guestlist</li>
       <li>A host at the club to look after you during your night</li>
@@ -187,17 +180,34 @@ function toggleMenu(){
       <textarea id="more" rows="4" placeholder="Tell us more… (club preference, guests, occasion)"></textarea>
 
       <button onclick="sendGuestlist()">Join Guestlist</button>
-
       <div class="fineprint">
         By clicking ‘JOIN GUESTLIST’ you agree that Alpha Mayfair may contact you about your booking.
       </div>
     </div>
   </div>
 
-  <footer>© 2025 ALPHA MAYFAIR — Guestlist & VIP Tables</footer>
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/447787672749" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+    </div>
+    <p>© 2025 ALPHA MAYFAIR — Guestlist & VIP Tables</p>
+  </footer>
 </div>
 
+<a class="wa-bubble" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20join%20a%20guestlist." target="_blank" aria-label="Book now on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
 <script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
 (function(){
   const d=new Date(),m=("0"+(d.getMonth()+1)).slice(-2),day=("0"+d.getDate()).slice(-2);
   const min=d.getFullYear()+"-"+m+"-"+day;
@@ -220,6 +230,5 @@ function sendGuestlist(){
   window.open(`https://wa.me/447787672749?text=${msg}`,'_blank');
 }
 </script>
-
 </body>
 </html>
