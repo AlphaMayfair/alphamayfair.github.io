@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>We Are Hiring – Alpha Mayfair</title>
+<title>Club Promoter Jobs in London – Alpha Mayfair</title>
+
+<!-- SEO -->
+<meta name="description" content="We are hiring VIP club promoters and nightlife hosts in London. Join Alpha Mayfair and get paid to party in Mayfair’s top clubs. Club promoter London opportunities with training, flexible hours and big commissions.">
+<meta name="keywords" content="club promoter London, London nightclub promoter jobs, Mayfair promoter, VIP host London, nightlife jobs London, student promoter job London">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="We Are Hiring – Club Promoters & VIP Hosts | Alpha Mayfair">
+<meta property="og:description" content="Become a VIP club promoter in London with Alpha Mayfair. Earn commissions, work flexible hours and party in the best Mayfair clubs.">
+<meta property="og:image" content="logo.jpg">
 
 <style>
   :root {
@@ -11,15 +20,15 @@
     --bg:#000;
     --muted:#cfcfcf;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
     background:var(--bg);
     color:#fff;
     font-family:Arial,Helvetica,sans-serif;
   }
 
   /* NAV BAR */
-  .navbar {
+  .navbar{
     width:100%;
     background:#000;
     border-bottom:1px solid rgba(212,175,55,0.3);
@@ -28,7 +37,7 @@
     top:0;
     z-index:9999;
   }
-  .nav-container {
+  .nav-container{
     max-width:1200px;
     margin:auto;
     padding:0 22px;
@@ -36,14 +45,14 @@
     justify-content:space-between;
     align-items:center;
   }
-  .nav-logo {
+  .nav-logo{
     color:var(--gold);
     text-decoration:none;
     font-size:22px;
     font-weight:900;
     letter-spacing:1px;
   }
-  .nav-links a {
+  .nav-links a{
     color:white;
     text-decoration:none;
     margin-left:22px;
@@ -52,155 +61,476 @@
     font-weight:600;
     opacity:.85;
   }
-  .nav-links a:hover { color:var(--gold); opacity:1; }
-  .hamburger {
-    width:30px; height:22px;
-    display:none; flex-direction:column;
+  .nav-links a:hover{color:var(--gold);opacity:1;}
+
+  .hamburger{
+    width:30px;
+    height:22px;
+    display:none;
+    flex-direction:column;
     justify-content:space-between;
     cursor:pointer;
   }
-  .hamburger span {
-    height:3px; background:var(--gold); border-radius:3px;
+  .hamburger span{
+    height:3px;
+    background:var(--gold);
+    border-radius:3px;
   }
   @media(max-width:760px){
-    .hamburger { display:flex; }
-    .nav-links {
-      position:absolute; top:100%; left:0; right:0;
-      background:#000; padding:20px 0;
-      flex-direction:column; align-items:center;
-      border-bottom:1px solid rgba(212,175,55,0.25);
+    .hamburger{display:flex;}
+    .nav-links{
+      position:absolute;
+      top:100%; left:0; right:0;
+      background:#000;
+      padding:20px 0;
       display:none;
+      flex-direction:column;
+      align-items:center;
+      border-bottom:1px solid rgba(212,175,55,0.25);
     }
-    .nav-links.open { display:flex; }
-    .nav-links a {
-      margin:12px 0; font-size:17px;
+    .nav-links.open{display:flex;}
+    .nav-links a{
+      margin:12px 0;
+      font-size:16px;
     }
   }
 
-  /* PAGE CONTENT */
-  .wrap {
-    max-width:900px;
+  /* PAGE WRAP & HERO */
+  .wrap{
+    max-width:1000px;
     margin:0 auto;
-    padding:30px 20px 50px;
-    text-align:center;
+    padding:30px 20px 60px;
   }
 
-  h1 {
+  .hero{
+    text-align:center;
+    margin-bottom:28px;
+    animation:fadeUp 0.8s ease forwards;
+    opacity:0;
+  }
+  .hero h1{
     font-size:30px;
     text-transform:uppercase;
     font-weight:900;
     letter-spacing:2px;
     color:var(--gold);
-    margin-bottom:10px;
+    margin-bottom:8px;
   }
-
-  h2 {
+  .hero h2{
     font-size:20px;
-    margin-top:15px;
     text-transform:uppercase;
     font-weight:800;
+    margin-bottom:10px;
   }
-
-  p {
-    font-size:17px;
-    margin:14px 0;
-    color:#e5e5e5;
+  .hero p{
+    font-size:16px;
+    color:var(--muted);
+    max-width:640px;
+    margin:0 auto 10px;
     line-height:1.6;
   }
-
-  ul {
-    list-style: none;
-    padding:0;
-    margin:18px 0;
-  }
-  ul li {
-    margin-bottom:10px;
-    font-size:16px;
+  .tagline{
+    font-size:17px;
+    margin-top:8px;
     color:#fff;
   }
+  .divider{
+    width:80px;
+    height:2px;
+    background:var(--gold);
+    margin:18px auto 10px;
+  }
 
-  /* APPLY BUTTON */
-  .apply-btn {
-    display:inline-block;
+  /* BENEFITS SECTION */
+  .benefits{
     margin-top:20px;
-    padding:14px 22px;
+    animation:fadeUp 0.9s ease forwards;
+    opacity:0;
+  }
+  .benefits h3{
+    text-transform:uppercase;
+    font-size:18px;
+    margin-bottom:8px;
+    color:var(--gold);
+    text-align:center;
+  }
+  .benefits p{
+    font-size:15px;
+    color:#eee;
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .benefits ul{
+    list-style:none;
+    padding:0;
+    margin:16px 0 4px;
+    text-align:left;
+  }
+  .benefits ul li{
+    margin-bottom:8px;
+    font-size:15px;
+  }
+
+  /* GALLERY - LUXURY MASONRY STYLE */
+  .gallery-section{
+    margin-top:32px;
+  }
+  .gallery-title{
+    text-align:center;
+    text-transform:uppercase;
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:14px;
+  }
+  .gallery{
+    column-count:3;
+    column-gap:10px;
+  }
+  .gallery-item{
+    break-inside:avoid;
+    margin-bottom:10px;
+    overflow:hidden;
+    border-radius:10px;
+    position:relative;
+  }
+  .gallery-item img{
+    width:100%;
+    display:block;
+    transition:transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  }
+  .gallery-item::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    box-shadow:0 0 0 rgba(212,175,55,0);
+    transition:box-shadow 0.4s ease;
+  }
+  .gallery-item:hover img{
+    transform:scale(1.05);
+    filter:brightness(1.1);
+  }
+  .gallery-item:hover::after{
+    box-shadow:0 0 16px rgba(212,175,55,0.9);
+  }
+
+  @media(max-width:900px){
+    .gallery{column-count:2;}
+  }
+  @media(max-width:600px){
+    .gallery{column-count:1;}
+  }
+
+  /* APPLICATION FORM */
+  .form-section{
+    margin-top:40px;
+    padding:20px 16px 26px;
+    background:#111;
+    border-radius:12px;
+    border:1px solid rgba(212,175,55,0.4);
+    animation:fadeUp 1s ease forwards;
+    opacity:0;
+  }
+  .form-section h3{
+    text-align:center;
+    font-size:19px;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:8px;
+  }
+  .form-section p{
+    font-size:14px;
+    color:var(--muted);
+    text-align:center;
+    margin-bottom:16px;
+  }
+  .form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px 16px;
+  }
+  @media(max-width:700px){
+    .form-grid{grid-template-columns:1fr;}
+  }
+  .form-group{
+    text-align:left;
+  }
+  .form-group label{
+    font-size:13px;
+    color:var(--gold);
+    margin-bottom:4px;
+    display:block;
+    font-weight:600;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    width:100%;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #333;
+    background:#000;
+    color:#fff;
+    font-size:14px;
+  }
+  .form-group textarea{
+    resize:vertical;
+    min-height:80px;
+  }
+  .form-group input[type="file"]{
+    padding:6px;
+    background:#000;
+  }
+
+  .apply-btn{
+    margin-top:16px;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
     background:var(--gold);
     color:#000;
     font-weight:900;
-    border-radius:6px;
-    text-decoration:none;
-    font-size:16px;
     text-transform:uppercase;
-    box-shadow:0 0 12px rgba(212,175,55,0.4);
+    letter-spacing:1px;
+    font-size:15px;
+    cursor:pointer;
+    box-shadow:0 0 10px rgba(212,175,55,0.4);
+    transition:box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .apply-btn:hover{
+    box-shadow:0 0 20px rgba(212,175,55,0.9);
+    transform:translateY(-1px);
+  }
+  .fineprint{
+    margin-top:10px;
+    font-size:11px;
+    color:var(--muted);
+    text-align:center;
   }
 
-  footer {
+  footer{
     text-align:center;
     color:#777;
     font-size:12px;
     margin-top:40px;
-    padding-bottom:20px;
+    padding:20px 16px 50px;
+    border-top:1px solid #111;
+  }
+  .footer-icons a img{
+    width:26px;
+    margin:0 8px;
+    vertical-align:middle;
+  }
+
+  /* WHATSAPP FLOATING BUBBLE */
+  .wa-bubble{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.7);
+    z-index:10000;
+    text-decoration:none;
+  }
+  .wa-bubble img{
+    width:30px;
+    height:30px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
   }
 </style>
-
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
-}
-</script>
-
 </head>
 <body>
 
-<!-- NAV BAR -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
-
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
       <a href="guestlist.html">Guestlist</a>
       <a href="clubs.html">Nightclubs</a>
+      <a href="about.html">About</a>
       <a href="hire.html">We Are Hiring</a>
     </div>
-
     <div class="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
 
-
 <div class="wrap">
 
-  <h1>WE ARE HIRING</h1>
-  <h2>VIP Club Promoters & Hosts</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>We Are Hiring</h1>
+    <h2>VIP Club Promoters & Hosts</h2>
+    <div class="divider"></div>
+    <p>Join our elite Alpha Mayfair team and get <strong>paid to party</strong> in London’s most exclusive Mayfair clubs.</p>
+    <p class="tagline">Students, creatives & nightlife lovers (18–25) — this is your chance.</p>
+  </section>
 
-  <p>Join our elite Alpha Mayfair team and get <strong>paid to party</strong>.</p>
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <h3>Why Join Alpha Mayfair?</h3>
+    <p>We’re building a strong team of motivated, social and ambitious promoters.</p>
+    <ul>
+      <li>🔥 <strong>Full training provided</strong> — no experience needed</li>
+      <li>💸 <strong>Earn £100 – £1,500 per week</strong> (commission + bonuses)</li>
+      <li>⏱ <strong>Flexible hours</strong> — part-time or full-time</li>
+      <li>🌟 Network with <strong>celebrities, models & VIPs</strong></li>
+      <li>🥂 Free entry to top Mayfair nightclubs</li>
+      <li>📈 Grow your personal brand & nightlife connections</li>
+    </ul>
+  </section>
 
-  <p>If you're a student or just looking for a fun, flexible and high-paying side hustle, this is your chance.</p>
+  <!-- GALLERY -->
+  <section class="gallery-section">
+    <h3 class="gallery-title">Nightlife • Promoters • Mayfair Vibes</h3>
+    <div class="gallery">
+      <!-- We reuse your 4 images to create a 12-image luxury grid -->
+      <div class="gallery-item"><img src="promoter1.JPG" alt="London club promoter at Mayfair club"></div>
+      <div class="gallery-item"><img src="promoter2.JPG" alt="VIP nightlife host in London"></div>
+      <div class="gallery-item"><img src="promoter3.JPG" alt="Mayfair nightclub dance floor"></div>
+      <div class="gallery-item"><img src="promoter4.JPG" alt="Bottle service in London nightclub"></div>
+      <div class="gallery-item"><img src="promoter5.JPG" alt="Alpha Mayfair club promoter"></div>
+      <div class="gallery-item"><img src="promoter6.JPG" alt="VIP table at Mayfair club"></div>
+      <div class="gallery-item"><img src="promoter7.JPG" alt="Nightlife promoter in London"></div>
+      <div class="gallery-item"><img src="promoter8.JPG" alt="Late night party scene in Mayfair"></div>
+      <div class="gallery-item"><img src="promoter9.JPG" alt="Student club promoter London"></div>
+      <div class="gallery-item"><img src="promoter10.JPG" alt="VIP host London"></div>
+      <div class="gallery-item"><img src="promoter11.JPG" alt="Mayfair nightlife"></div>
+      <div class="gallery-item"><img src="promoter12.JPG" alt="Exclusive London club party"></div>
+    </div>
+  </section>
 
-  <h2>Why Join Alpha Mayfair?</h2>
+  <!-- APPLICATION FORM -->
+  <section class="form-section">
+    <h3>Apply to Become a Club Promoter</h3>
+    <p>Fill out the form below — your application will be sent directly to Alpha Mayfair on WhatsApp.</p>
 
-  <ul>
-    <li>🔥 Full training provided — no experience needed</li>
-    <li>💸 Earn £100 – £1,500 per week (commission + bonuses)</li>
-    <li>⏱ Flexible hours — part-time or full-time</li>
-    <li>🌟 Network with celebrities, models & VIP guests</li>
-    <li>🥂 Free entry to top Mayfair nightclubs</li>
-    <li>💼 Build connections & grow your personal brand</li>
-  </ul>
+    <form onsubmit="return sendApplication(event)">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input id="name" type="text" required placeholder="Your full name">
+        </div>
 
-  <p>We are recruiting motivated, social and confident individuals aged 18–25.</p>
+        <div class="form-group">
+          <label for="age">Age *</label>
+          <input id="age" type="number" min="18" max="30" required placeholder="18–25">
+        </div>
 
-  <a class="apply-btn"
-     href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I%20want%20to%20apply%20for%20the%20Club%20Promoter%20position."
-     target="_blank">Apply Now</a>
+        <div class="form-group">
+          <label for="instagram">Instagram @ *</label>
+          <input id="instagram" type="text" required placeholder="@yourhandle">
+        </div>
+
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number *</label>
+          <input id="whatsapp" type="text" required placeholder="+44 7…">
+        </div>
+
+        <div class="form-group">
+          <label for="availability">Availability *</label>
+          <select id="availability" required>
+            <option value="">Select availability…</option>
+            <option value="Weekends only">Weekends only</option>
+            <option value="Weekdays & weekends">Weekdays & weekends</option>
+            <option value="Mainly weekdays">Mainly weekdays</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="experience">Any previous nightlife / promo experience?</label>
+          <input id="experience" type="text" placeholder="Optional">
+        </div>
+
+        <div class="form-group" style="grid-column:1/-1;">
+          <label for="why">Why do you want to join Alpha Mayfair? *</label>
+          <textarea id="why" required placeholder="Tell us a bit about you, your crowd and why you’d be a great promoter."></textarea>
+        </div>
+
+        <div class="form-group" style="grid-column:1/-1;">
+          <label for="photo">Upload photo (optional)</label>
+          <input id="photo" type="file" accept="image/*">
+          <small style="font-size:11px;color:var(--muted);display:block;margin-top:4px;">
+            Note: File uploads are not sent automatically via WhatsApp. We may ask you to send a picture directly after your application.
+          </small>
+        </div>
+      </div>
+
+      <button class="apply-btn" type="submit">Send Application via WhatsApp</button>
+
+      <div class="fineprint">
+        By applying, you confirm you are 18+ and agree that Alpha Mayfair may contact you regarding this role.
+      </div>
+    </form>
+  </section>
 
 </div>
 
-<footer>© 2025 ALPHA MAYFAIR — VIP Nightlife Recruitment</footer>
+<footer>
+  <div class="footer-icons">
+    <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://wa.me/447787672749" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </a>
+  </div>
+  <p>© 2025 ALPHA MAYFAIR — Club Promoter Jobs in London</p>
+</footer>
+
+<a class="wa-bubble"
+   href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20apply%20as%20a%20VIP%20club%20promoter."
+   target="_blank"
+   aria-label="Apply now on WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+
+function sendApplication(e){
+  e.preventDefault();
+
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const age = encodeURIComponent(document.getElementById('age').value);
+  const ig = encodeURIComponent(document.getElementById('instagram').value);
+  const wa = encodeURIComponent(document.getElementById('whatsapp').value);
+  const availability = encodeURIComponent(document.getElementById('availability').value);
+  const experience = encodeURIComponent(document.getElementById('experience').value);
+  const why = encodeURIComponent(document.getElementById('why').value);
+
+  const msg =
+    `Hi Alpha Mayfair, I’d like to apply as a VIP Club Promoter.%0A` +
+    `Name: ${name}%0A` +
+    `Age: ${age}%0A` +
+    `Instagram: ${ig}%0A` +
+    `WhatsApp: ${wa}%0A` +
+    `Availability: ${availability}%0A` +
+    `Experience: ${experience}%0A` +
+    `Why I want to join: ${why}`;
+
+  const url = `https://wa.me/447787672749?text=${msg}`;
+  window.open(url, '_blank');
+  return false;
+}
+</script>
 
 </body>
 </html>
