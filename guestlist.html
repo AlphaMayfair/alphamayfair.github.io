@@ -6,348 +6,331 @@
 <title>Join Guestlist – Alpha Mayfair</title>
 
 <!-- SEO -->
-<meta name="description" content="Join the London club guestlist for exclusive Mayfair nightclubs with Alpha Mayfair. Complimentary drinks, VIP access, promoter tables, and top nightlife experiences.">
-<meta name="keywords" content="London guestlist, Mayfair clubs guestlist, club promoter London, Cirque guestlist, Reign guestlist, Tape guestlist, Mayfair nightlife">
+<meta name="description" content="Join the London club guestlist for exclusive Mayfair nightclubs. Complimentary drinks, VIP promoter tables and access to elite venues like Tabu, Cirque, Reign, Tape and more.">
+<meta name="keywords" content="London guestlist, Mayfair clubs guestlist, VIP club London, Cirque guestlist, Tabu guestlist, Reign guestlist">
 <meta name="robots" content="index,follow">
 
 <style>
-  :root{
-    --gold:#d4af37;
-    --bg:#000;
-    --muted:#d0d0d0;
-  }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{
-    background:var(--bg);
-    color:#fff;
-    font-family:Arial,Helvetica,sans-serif;
-  }
-
-  /* NAVBAR */
-  .navbar{
-    width:100%;
-    background:#000;
-    border-bottom:1px solid rgba(212,175,55,0.3);
-    padding:14px 0;
-    position:sticky;
-    top:0;
-    z-index:9999;
-  }
-  .nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:0 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .nav-logo{
-    color:var(--gold);
-    text-decoration:none;
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:1px;
-  }
-  .nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    text-transform:uppercase;
-    font-size:14px;
-    font-weight:600;
-    opacity:.85;
-  }
-  .nav-links a:hover{
-    color:var(--gold);
-    opacity:1;
-  }
-
-  .hamburger{
-    width:30px; height:22px;
-    display:none;
-    flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-  }
-  .hamburger span{
-    height:3px;
-    background:var(--gold);
-    border-radius:3px;
-  }
-
-  @media(max-width:760px){
-    .hamburger{display:flex;}
-    .nav-links{
-      position:absolute;
-      top:100%; left:0; right:0;
-      background:#000;
-      padding:20px 0;
-      display:none;
-      flex-direction:column;
-      align-items:center;
-    }
-    .nav-links.open{display:flex;}
-    .nav-links a{
-      margin:12px 0;
-      font-size:16px;
-    }
-  }
-
-  /* CONTENT */
-  .wrap{
-    max-width:900px;
-    margin:0 auto;
-    padding:28px 18px 60px;
-  }
-  h1,h2{
-    text-align:center;
-    text-transform:uppercase;
-    font-weight:800;
-  }
-  h1{
-    margin-top:10px;
-    font-size:26px;
-    color:var(--gold);
-  }
-  h2{
-    margin-top:30px;
-    font-size:20px;
-  }
-  p{
-    font-size:15px;
-    line-height:1.6;
-    margin:10px 0;
-    color:#eee;
-  }
-  ul{
-    margin:10px 0 10px 26px;
-    color:#eee;
-    font-size:15px;
-  }
-  li{ margin-bottom:6px; }
-
-  /* FORM */
-  .form-box{
-    margin-top:20px;
-    background:#111;
-    border-radius:10px;
-    padding:18px 16px 26px;
-    border:1px solid rgba(212,175,55,0.4);
-  }
-  .form-box input,
-  .form-box textarea{
-    width:100%;
-    padding:12px;
-    margin:6px 0 12px;
-    border-radius:4px;
-    border:none;
-    font-size:14px;
-    background:#000;
-    color:#fff;
-    border:1px solid #333;
-  }
-  .form-box button{
-    width:100%;
-    padding:14px;
-    background:var(--gold);
-    border:none;
-    border-radius:4px;
-    text-transform:uppercase;
-    font-weight:800;
-    font-size:14px;
-    cursor:pointer;
-    color:#000;
-  }
-  .fineprint{
-    font-size:11px;
-    color:var(--muted);
-    text-align:center;
-    margin-top:8px;
-  }
-
-  /* FAQ SECTION */
-  .faq-section{
-    margin-top:40px;
-  }
-  .faq-section h2{
-    color:var(--gold);
-  }
-
-  footer{
-    text-align:center;
-    color:#666;
-    font-size:12px;
-    margin-top:40px;
-    padding-bottom:20px;
-  }
-</style>
-
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
+:root{
+  --gold:#d4af37;
+  --bg:#000;
+  --muted:#cfcfcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
-(function(){
-  const d=new Date(),
-  m=("0"+(d.getMonth()+1)).slice(-2),
-  day=("0"+d.getDate()).slice(-2);
-  const min=d.getFullYear()+"-"+m+"-"+day;
-  document.getElementById("date")?.setAttribute("min",min);
-})();
-</script>
+/* NAV */
+.navbar{
+  background:#000;
+  border-bottom:1px solid rgba(212,175,55,.3);
+  padding:14px 0;
+  position:sticky;
+  top:0;
+  z-index:9999;
+}
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.nav-logo{
+  color:var(--gold);
+  font-weight:900;
+  text-decoration:none;
+  font-size:22px;
+}
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:22px;
+  text-transform:uppercase;
+  font-size:14px;
+  opacity:.85;
+}
+.nav-links a:hover{color:var(--gold);opacity:1}
+.hamburger{display:none}
+
+@media(max-width:760px){
+  .hamburger{display:block;color:var(--gold)}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    background:#000;
+    padding:18px 0;
+    flex-direction:column;
+    align-items:center;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{margin:10px 0;font-size:16px}
+}
+
+/* CONTENT */
+.wrap{
+  max-width:900px;
+  margin:auto;
+  padding:30px 18px 70px;
+}
+h1,h2{
+  text-align:center;
+  text-transform:uppercase;
+  font-weight:800;
+}
+h1{
+  font-size:26px;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+p{
+  font-size:15px;
+  line-height:1.6;
+  margin:10px 0;
+  color:#eee;
+}
+
+/* FORM */
+.form-box{
+  background:#111;
+  border-radius:10px;
+  padding:18px;
+  border:1px solid rgba(212,175,55,.4);
+}
+.form-box input,.form-box textarea{
+  width:100%;
+  padding:12px;
+  margin:6px 0 12px;
+  background:#000;
+  border:1px solid #333;
+  color:#fff;
+}
+.form-box button{
+  width:100%;
+  padding:14px;
+  background:var(--gold);
+  border:none;
+  font-weight:900;
+  cursor:pointer;
+}
+.fineprint{
+  font-size:11px;
+  color:var(--muted);
+  text-align:center;
+  margin-top:8px;
+}
+
+/* FADE-IN */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FAQ ACCORDION */
+.accordion{
+  margin-top:40px;
+}
+.accordion-item{
+  border:1px solid rgba(212,175,55,.35);
+  border-radius:8px;
+  margin-bottom:14px;
+  overflow:hidden;
+}
+.accordion-header{
+  padding:14px 16px;
+  cursor:pointer;
+  background:#0b0b0b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.accordion-header h3{
+  font-size:16px;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+.accordion-header span{
+  font-size:18px;
+}
+.accordion-content{
+  display:none;
+  padding:16px;
+  background:#111;
+}
+.accordion-content p{
+  font-size:14px;
+  margin-bottom:10px;
+}
+.club-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.club-grid img{
+  width:100%;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  color:#777;
+  font-size:12px;
+  margin-top:40px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAV BAR -->
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
-
+    <a class="nav-logo" href="index.html">ALPHA MAYFAIR</a>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
-      <a href="book.html">Book a Table</a>
+      <a href="book.html">Book</a>
       <a href="guestlist.html">Guestlist</a>
-      <a href="clubs.html">Nightclubs</a>
+      <a href="clubs.html">Clubs</a>
       <a href="hire.html">We Are Hiring</a>
     </div>
-
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</div>
   </div>
 </nav>
 
 <div class="wrap">
 
-  <h1>London Club Guestlist</h1>
+<h1 class="fade">London Club Guestlist</h1>
 
-  <div class="section">
-    <h2>London Club Guestlist</h2>
-    <p>
-      Exclusive Mayfair nightclubs are the place to be if you’re looking to join a London guestlist
-      and make your night unforgettable. Perfect for birthdays, girls’ nights out, or luxury weekends 
-      in the city.
-    </p>
-    <p>
-      Expect elegant parties, exclusive after-parties, celebrity sightings, and one extraordinary 
-      night after the other.
-    </p>
-    <p>
-      To join the guestlist with Alpha Mayfair, there’s no cost — we guide you and recommend the 
-      best club for your date.
-    </p>
-  </div>
+<p class="fade">
+Join London’s most exclusive Mayfair nightclubs through our VIP guestlist and enjoy complimentary drinks,
+promoter tables and access to elite venues.
+</p>
 
-  <div class="section">
-    <h2>What Does a Guestlist Include?</h2>
-    <p>Joining a London guestlist typically means:</p>
-    <ul>
-      <li>Entry fee (often £0/£10/£20 depending on night & arrival time)</li>
-      <li>Complimentary drinks for many ladies’ groups</li>
-      <li>Access to the promoter table</li>
-      <li>A host at the venue to look after you</li>
-    </ul>
-  </div>
+<div class="form-box fade">
+  <input id="name" placeholder="Full name*">
+  <input id="whatsapp" placeholder="WhatsApp number*">
+  <input id="instagram" placeholder="Instagram @*">
+  <input id="date" type="date">
+  <textarea id="more" placeholder="Club preference, guests, occasion"></textarea>
+  <button onclick="sendGuestlist()">Join Guestlist</button>
+  <div class="fineprint">We’ll contact you shortly to confirm.</div>
+</div>
 
-  <div class="section">
-    <h2>Join the Guestlist</h2>
+<!-- FAQ -->
+<div class="accordion fade">
 
-    <div class="form-box">
-      <input id="name" placeholder="Full name*" required>
-      <input id="email" type="email" placeholder="Email*" required>
-      <input id="whatsapp" placeholder="WhatsApp number*" required>
-      <input id="instagram" placeholder="Instagram @*" required>
-      <input id="birthday" placeholder="Birthday (DD/MM/YYYY)*" required>
-      <input id="date" type="date" required>
-      <textarea id="more" rows="4" placeholder="Tell us more… (club preference, guests, occasion)"></textarea>
-
-      <button onclick="sendGuestlist()">Join Guestlist</button>
-
-      <div class="fineprint">
-        By clicking ‘JOIN GUESTLIST’ you agree that Alpha Mayfair may contact you about your booking.
+  <!-- FAQ 1 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <h3>What is a London Club Guestlist?</h3><span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>
+        A London guestlist allows you to access high-end Mayfair clubs with complimentary drinks,
+        promoter table access and VIP hosting.
+      </p>
+      <div class="club-grid">
+        <img src="tabu.JPG">
+        <img src="reign.JPG">
+        <img src="cirque.JPG">
+        <img src="tape.JPG">
       </div>
     </div>
   </div>
 
-  <!-- FAQ Section -->
-  <div class="faq-section">
-    <h2>London Club Guestlist FAQ</h2>
+  <!-- FAQ 2 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <h3>Entry Fees & What’s Included</h3><span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>
+        Entry is usually £0–£20 depending on the night. Many guestlists include complimentary drinks
+        and promoter hospitality.
+      </p>
+      <div class="club-grid">
+        <img src="selene.JPG">
+        <img src="luxx.JPG">
+        <img src="cuckoo.JPG">
+        <img src="dear-darling.JPG">
+      </div>
+    </div>
+  </div>
 
-    <p>
-      Joining a London club guestlist is the best way for a group of ladies to party at the best 
-      clubs in Mayfair and access exclusive high-end venues.
-    </p>
+  <!-- FAQ 3 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <h3>Music & Club Vibe</h3><span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>
+        Most Mayfair clubs play hip-hop & R&B. Some venues offer open-format or house music across multiple rooms.
+      </p>
+      <div class="club-grid">
+        <img src="tape.JPG">
+        <img src="tabu.JPG">
+        <img src="cirque.JPG">
+        <img src="luxx.JPG">
+      </div>
+    </div>
+  </div>
 
-    <p>
-      A London guestlist gives you access to the nightclub of your choice, complimentary drinks, 
-      and access to the promoter table — all while mingling with international socialites, models, 
-      and the elite Mayfair crowd.
-    </p>
-
-    <p>
-      London’s most exclusive clubs are celebrity hotspots. It’s common to see 
-      <strong>Travis Scott, Jamie Foxx, Asake, Post Malone, G-Eazy, Burna Boy</strong> and famous 
-      footballers partying inside.
-    </p>
-
-    <p>
-      Staying more than one night? Let us know — we can organise your entire week.
-    </p>
-
-    <h2>London Club Entry Fee</h2>
-    <p>
-      Entry fees are usually <strong>£0, £10, or £20</strong> depending on night and arrival time.  
-      Some guestlists offer complimentary entry.
-    </p>
-    <p>
-      Guestlists often include complimentary drinks and promoter-table hospitality.
-    </p>
-
-    <p>
-      Unsure which club to pick? We can recommend the perfect venue for your vibe.
-    </p>
-
-    <h2>Exclusive London Clubs Music</h2>
-    <p>
-      Most exclusive London clubs play <strong>hip-hop and R&B</strong> — including Tape, Cirque Le Soir 
-      and Tabu London.
-    </p>
-    <p>
-      Clubs like Luxx play open-format.  
-      Clubs like Maddox and Cuckoo mix hip-hop and house depending on the room.
-    </p>
-
-    <h2>London Clubs Dress Code</h2>
-    <p>The rule is simple: <strong>Dress to impress</strong>.</p>
-
-    <ul>
-      <li><strong>Ladies:</strong> Heels, dresses, elegant outfits.</li>
-      <li>No trainers, casual wear or sportswear.</li>
-    </ul>
-
-    <p>If you’re unsure, ask us — we’re here to help.</p>
+  <!-- FAQ 4 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      <h3>Dress Code</h3><span>+</span>
+    </div>
+    <div class="accordion-content">
+      <p>
+        Dress to impress. Ladies should wear heels or elegant outfits. No trainers or casual wear.
+      </p>
+      <div class="club-grid">
+        <img src="reign.JPG">
+        <img src="selene.JPG">
+        <img src="cuckoo.JPG">
+        <img src="dear-darling.JPG">
+      </div>
+    </div>
   </div>
 
 </div>
 
-<footer>© 2025 ALPHA MAYFAIR — Guestlist & VIP Tables</footer>
+<footer>© 2025 ALPHA MAYFAIR — VIP London Guestlist</footer>
+</div>
 
 <script>
+/* Accordion */
+document.querySelectorAll('.accordion-header').forEach(h=>{
+  h.onclick=()=>{
+    const c=h.nextElementSibling;
+    const open=c.style.display==="block";
+    document.querySelectorAll('.accordion-content').forEach(x=>x.style.display="none");
+    document.querySelectorAll('.accordion-header span').forEach(s=>s.textContent="+");
+    if(!open){c.style.display="block";h.querySelector('span').textContent="−";}
+  }
+});
+
+/* Fade-in on scroll */
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>x.isIntersecting && x.target.classList.add("show"))
+},{threshold:.15});
+document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
+
+/* WhatsApp */
 function sendGuestlist(){
-  const name = encodeURIComponent(document.getElementById('name').value);
-  const email = encodeURIComponent(document.getElementById('email').value);
-  const waNum = encodeURIComponent(document.getElementById('whatsapp').value);
-  const ig = encodeURIComponent(document.getElementById('instagram').value);
-  const bday = encodeURIComponent(document.getElementById('birthday').value);
-  const date = encodeURIComponent(document.getElementById('date').value);
-  const more = encodeURIComponent(document.getElementById('more').value);
-
-  const msg =
-    `Hi Alpha Mayfair, I’d like to join the guestlist.%0A` +
-    `Name: ${name}%0AEmail: ${email}%0AWhatsApp: ${waNum}%0AInstagram: ${ig}%0ABirthday: ${bday}%0ADate: ${date}%0ADetails: ${more}`;
-
-  window.open(`https://wa.me/447787672749?text=${msg}`,'_blank');
+  const msg=`Hi Alpha Mayfair, I’d like to join the guestlist.%0AName: ${name.value}%0AIG: ${instagram.value}%0ADate: ${date.value}%0ADetails: ${more.value}`;
+  window.open(`https://wa.me/447787672749?text=${msg}`,"_blank");
 }
 </script>
 
