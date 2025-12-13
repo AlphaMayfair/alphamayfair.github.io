@@ -3,187 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpha Mayfair – London VIP Nightlife & Mayfair Clubs</title>
+
+<title>Alpha Mayfair | VIP Nightclubs, Tables & Guestlist</title>
 
 <!-- SEO -->
-<meta name="description" content="Alpha Mayfair offers VIP tables, guestlist and luxury nightlife hosting at London’s top Mayfair clubs including Cirque Le Soir, Reign, Tape, Tabu, Cuckoo, Dear Darling, INCA, Selene and Luxx.">
+<meta name="description" content="Alpha Mayfair provides VIP table bookings, exclusive guestlists and access to London’s top Mayfair nightclubs.">
+<meta name="keywords" content="Mayfair nightclubs, London guestlist, VIP tables London, Cirque Le Soir, Tabu London, Reign Showclub">
 <meta name="robots" content="index,follow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Alpha Mayfair – London VIP Nightlife">
-<meta property="og:description" content="Book VIP tables, join guestlists and explore the most exclusive Mayfair clubs with Alpha Mayfair.">
-<meta property="og:image" content="logo.jpg">
 
 <style>
-  :root {
-    --gold: #d4af37;
-    --bg: #000;
-    --muted: #cfcfcf;
-  }
-  * { box-sizing: border-box; margin:0; padding:0; }
-  body {
-    background: var(--bg);
-    color:#fff;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+:root{
+  --gold:#d4af37;
+  --bg:#000;
+  --muted:#cfcfcf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-  /* NAVBAR */
-  .navbar {
-    width:100%;
-    background:#000;
-    border-bottom:1px solid rgba(212,175,55,0.3);
-    padding:14px 0;
-    position:sticky;
-    top:0;
-    z-index:9999;
-  }
-  .nav-container {
-    max-width:1200px;
-    margin:auto;
-    padding:0 22px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .nav-logo {
-    color:var(--gold);
-    text-decoration:none;
-    font-weight:900;
-    font-size:22px;
-    letter-spacing:1px;
-  }
-  .nav-links a {
-    color:white;
-    text-decoration:none;
-    margin-left:22px;
-    text-transform:uppercase;
-    font-size:14px;
-    font-weight:600;
-    opacity:.85;
-  }
-  .nav-links a:hover { color:var(--gold); opacity:1; }
+/* NAV */
+.navbar{
+  background:#000;
+  border-bottom:1px solid rgba(212,175,55,.3);
+  padding:14px 0;
+  position:sticky;
+  top:0;
+  z-index:9999;
+}
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.nav-logo{
+  color:var(--gold);
+  font-weight:900;
+  text-decoration:none;
+  font-size:22px;
+}
+.nav-links a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:22px;
+  text-transform:uppercase;
+  font-size:14px;
+  opacity:.85;
+}
+.nav-links a:hover{color:var(--gold);opacity:1}
+.hamburger{display:none;color:var(--gold);font-size:22px}
 
-  .hamburger {
-    width:30px;
-    height:22px;
+@media(max-width:760px){
+  .hamburger{display:block}
+  .nav-links{
     display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    background:#000;
+    padding:18px 0;
     flex-direction:column;
-    justify-content:space-between;
-    cursor:pointer;
-  }
-  .hamburger span {
-    height:3px;
-    background:var(--gold);
-    border-radius:3px;
-  }
-  @media(max-width:760px){
-    .hamburger{display:flex;}
-    .nav-links{
-      position:absolute;
-      top:100%; left:0; right:0;
-      background:#000;
-      padding:20px 0;
-      display:none;
-      flex-direction:column;
-      align-items:center;
-      border-bottom:1px solid rgba(212,175,55,0.25);
-    }
-    .nav-links.open{display:flex;}
-    .nav-links a{margin:12px 0; font-size:16px;}
-  }
-
-  /* HERO */
-  .hero {
-    text-align:center;
-    padding:80px 20px 60px;
-    animation: fadeIn 1s ease-out;
-  }
-  .hero img {
-    width:260px;
-    max-width:80%;
-    margin-bottom:30px;
-  }
-  .hero h1 {
-    font-size:28px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    margin-bottom:26px;
-  }
-  .divider {
-    width:80px;
-    height:2px;
-    background:var(--gold);
-    margin:20px auto;
-  }
-  .hero-sub {
-    max-width:700px;
-    margin:20px auto 40px;
-    font-size:17px;
-    line-height:1.6;
-    color:var(--muted);
-  }
-  .cta-wrap {
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-    margin:40px auto;
-    max-width:420px;
-  }
-  .cta-btn {
-    text-decoration:none;
-    text-align:center;
-    padding:14px;
-    background:var(--gold);
-    color:black;
-    font-weight:800;
-    font-size:15px;
-    border-radius:30px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-  }
-  .cta-btn:hover { opacity:.85; }
-
-  footer {
-    margin-top:50px;
-    padding:30px 20px 50px;
-    text-align:center;
-    color:#777;
-    font-size:13px;
-    border-top:1px solid #111;
-  }
-  .footer-icons{
-    margin-bottom:8px;
-  }
-  .footer-icons a img{
-    width:26px;
-    margin:0 8px;
-    vertical-align:middle;
-  }
-
-  /* WHATSAPP FLOATING BUBBLE (Book Now) */
-  .wa-bubble{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    background:#25D366;
-    display:flex;
     align-items:center;
-    justify-content:center;
-    box-shadow:0 6px 18px rgba(0,0,0,0.7);
-    z-index:10000;
-    text-decoration:none;
   }
-  .wa-bubble img{
-    width:30px;
-    height:30px;
-  }
+  .nav-links.open{display:flex}
+  .nav-links a{margin:10px 0;font-size:16px}
+}
 
-  @keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
-  }
+/* HERO */
+.hero{
+  padding:60px 18px 50px;
+  text-align:center;
+}
+.hero h1{
+  color:var(--gold);
+  font-size:30px;
+  font-weight:900;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero p{
+  margin-top:12px;
+  font-size:16px;
+  color:#eee;
+  max-width:620px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* CTA */
+.cta-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:40px;
+  padding:0 18px;
+}
+.cta-box{
+  background:#111;
+  border:1px solid rgba(212,175,55,.4);
+  border-radius:10px;
+  padding:26px 18px;
+  text-align:center;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.cta-box:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 18px rgba(212,175,55,.7);
+}
+.cta-box h3{
+  color:var(--gold);
+  margin-bottom:8px;
+  text-transform:uppercase;
+}
+.cta-box a{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 18px;
+  background:var(--gold);
+  color:#000;
+  font-weight:800;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+/* REVIEWS GALLERY */
+.reviews-section{
+  margin-top:60px;
+  padding:40px 18px 10px;
+  text-align:center;
+}
+.reviews-title{
+  color:var(--gold);
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.reviews-sub{
+  font-size:15px;
+  color:#ddd;
+  margin:10px 0 22px;
+}
+.reviews-gallery-wrap{
+  position:relative;
+}
+.swipe-hint{
+  display:none;
+  position:absolute;
+  right:10px;
+  top:-10px;
+  transform:translateY(-100%);
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  color:#000;
+  background:var(--gold);
+}
+@media(max-width:760px){
+  .swipe-hint{display:inline-block}
+}
+.reviews-gallery{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  padding-bottom:10px;
+}
+.reviews-gallery img{
+  height:200px;
+  border-radius:10px;
+  scroll-snap-align:start;
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+.reviews-gallery img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 18px rgba(212,175,55,.8);
+}
+
+/* INSTAGRAM */
+.instagram-section{
+  margin-top:70px;
+  padding:40px 18px 10px;
+  text-align:center;
+}
+.insta-title{
+  color:var(--gold);
+  font-size:22px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.insta-sub{
+  font-size:15px;
+  color:#ddd;
+  margin:10px 0 24px;
+}
+.instagram-embed{
+  max-width:540px;
+  margin:0 auto;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 0 22px rgba(212,175,55,.35);
+}
+.instagram-embed iframe{
+  width:100%;
+  height:620px;
+  border:none;
+}
+.insta-btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:10px 20px;
+  background:var(--gold);
+  color:#000;
+  font-weight:900;
+  text-decoration:none;
+  border-radius:6px;
+}
+
+/* FADE */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .9s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+  margin-top:50px;
+  text-align:center;
+  color:#777;
+  font-size:12px;
+  padding-bottom:30px;
+}
 </style>
 </head>
 
@@ -191,82 +251,118 @@
 
 <nav class="navbar">
   <div class="nav-container">
-    <a href="index.html" class="nav-logo">ALPHA MAYFAIR</a>
+    <a class="nav-logo" href="index.html">ALPHA MAYFAIR</a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
       <a href="book.html">Book a Table</a>
       <a href="guestlist.html">Guestlist</a>
       <a href="clubs.html">Nightclubs</a>
-      <a href="about.html">About</a>
       <a href="hire.html">We Are Hiring</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="hamburger" onclick="navLinks.classList.toggle('open')">☰</div>
   </div>
 </nav>
 
-<section class="hero">
-  <img src="logo.jpg" alt="Alpha Mayfair Logo">
-  <h1>London’s Most Exclusive Nightlife Experience</h1>
-  <div class="divider"></div>
-  <p class="hero-sub">
-    VIP Tables, Guestlists, Luxury Events & curated Mayfair nightlife. Alpha Mayfair connects you
-    with London’s top venues: Cirque Le Soir, Tape, Reign, Tabu, Cuckoo, Dear Darling, INCA, Selene & Luxx.
-  </p>
-  <div class="cta-wrap">
-    <a href="book.html" class="cta-btn">Book a Table</a>
-    <a href="guestlist.html" class="cta-btn">Join Guestlist</a>
-    <a href="clubs.html" class="cta-btn">Explore Nightclubs</a>
+<section class="hero fade">
+  <h1>Elite Mayfair Nightlife</h1>
+  <p>VIP tables, exclusive guestlists & access to London’s most iconic nightclubs.</p>
+</section>
+
+<section class="cta-grid fade">
+  <div class="cta-box">
+    <h3>Book a Table</h3>
+    <p>VIP tables & bottle service.</p>
+    <a href="book.html">Book Now</a>
+  </div>
+  <div class="cta-box">
+    <h3>Join Guestlist</h3>
+    <p>Complimentary drinks & entry.</p>
+    <a href="guestlist.html">Join Now</a>
+  </div>
+  <div class="cta-box">
+    <h3>Explore Nightclubs</h3>
+    <p>Mayfair’s hottest venues.</p>
+    <a href="clubs.html">Explore</a>
   </div>
 </section>
 
-<!-- CLUB REVIEWS GALLERY -->
+<!-- REVIEWS -->
 <section class="reviews-section fade">
   <h2 class="reviews-title">Mayfair Nights & Club Reviews</h2>
-  <p class="reviews-sub">
-    Real nights. Real vibes. Exclusive moments inside London’s top nightclubs.
-  </p>
+  <p class="reviews-sub">Real nights. Real vibes. Exclusive moments.</p>
 
-  <div class="reviews-gallery">
-    <img src="nightlife1.JPG" alt="Mayfair nightlife">
-    <img src="nightlife2.JPG" alt="London club night">
-    <img src="nightlife3.JPG" alt="VIP table London">
-    <img src="nightlife4.JPG" alt="Luxury nightclub Mayfair">
-    <img src="nightlife5.JPG" alt="Club promoter night">
-    <img src="nightlife6.JPG" alt="Bottle service London">
-    <img src="nightlife7.JPG" alt="Mayfair club crowd">
-    <img src="nightlife8.JPG" alt="Exclusive London nightlife">
-    <img src="nightlife9.JPG" alt="VIP party London">
-    <img src="nightlife10.JPG" alt="Luxury club London">
-    <img src="nightlife11.JPG" alt="Mayfair club reviews">
-    <img src="nightlife12.JPG" alt="London nightlife scene">
-    <img src="nightlife13.JPG" alt="Elite nightclub London">
-    <img src="nightlife14.JPG" alt="High-end club Mayfair">
-    <img src="nightlife15.JPG" alt="Alpha Mayfair nightlife">
+  <div class="reviews-gallery-wrap">
+    <div class="swipe-hint">Swipe →</div>
+    <div class="reviews-gallery" id="reviewsGallery">
+      <img src="nightlife1.JPG">
+      <img src="nightlife2.JPG">
+      <img src="nightlife3.JPG">
+      <img src="nightlife4.JPG">
+      <img src="nightlife5.JPG">
+      <img src="nightlife6.JPG">
+      <img src="nightlife7.JPG">
+      <img src="nightlife8.JPG">
+      <img src="nightlife9.JPG">
+      <img src="nightlife10.JPG">
+      <img src="nightlife11.JPG">
+      <img src="nightlife12.JPG">
+      <img src="nightlife13.JPG">
+      <img src="nightlife14.JPG">
+      <img src="nightlife15.JPG">
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-icons">
-    <a href="https://www.instagram.com/alpha_mayfair" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="https://wa.me/447787672749" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-    </a>
-  </div>
-  <p>© 2025 Alpha Mayfair — VIP Host & Luxury Nightlife</p>
-</footer>
+<!-- INSTAGRAM -->
+<section class="instagram-section fade">
+  <h2 class="insta-title">Follow @alpha_mayfair</h2>
+  <p class="insta-sub">Live moments from London’s most exclusive nights.</p>
 
-<a class="wa-bubble" href="https://wa.me/447787672749?text=Hi%20Alpha%20Mayfair,%20I’d%20like%20to%20book%20a%20night%20out." target="_blank" aria-label="Book now on WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
+  <div class="instagram-embed">
+    <iframe
+      src="https://www.instagram.com/alpha_mayfair/embed"
+      allowtransparency="true"
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <a class="insta-btn" href="https://www.instagram.com/alpha_mayfair" target="_blank">
+    View on Instagram
+  </a>
+</section>
+
+<footer>© 2025 ALPHA MAYFAIR — VIP London Nightlife</footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("open");
-}
+/* Fade-in */
+const obs=new IntersectionObserver(e=>{
+  e.forEach(x=>x.isIntersecting && x.target.classList.add("show"))
+},{threshold:.2});
+document.querySelectorAll(".fade").forEach(el=>obs.observe(el));
+
+/* Auto-scroll gallery */
+(function(){
+  const g=document.getElementById("reviewsGallery");
+  if(!g) return;
+  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let paused=false;
+  const SPEED=.35;
+
+  function loop(){
+    if(!paused){
+      g.scrollLeft+=SPEED;
+      if(g.scrollLeft>=g.scrollWidth-g.clientWidth-1) g.scrollLeft=0;
+    }
+    requestAnimationFrame(loop);
+  }
+
+  g.addEventListener("mouseenter",()=>paused=true);
+  g.addEventListener("mouseleave",()=>paused=false);
+  g.addEventListener("touchstart",()=>paused=true,{passive:true});
+  g.addEventListener("touchend",()=>paused=false,{passive:true});
+
+  loop();
+})();
 </script>
 
 </body>
